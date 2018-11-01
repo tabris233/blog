@@ -15,12 +15,97 @@ toc: true
 >Arch 作为'最难'安装的linux系统  通过它可以更好的了解linux
 >
 > 这里是VMware安装的Arch虚拟机
-
+> [配置和美化Arch Linux](https://blog.csdn.net/u011054333/article/details/50631599)
 ## 安装:
 
 这里参考
 
 > [这是最全面的安装指南](https://www.viseator.com/2017/05/17/arch_install/)
+
+## 基础设置:
+
+#### 创建新用户
+```
+# useradd -m -G wheel username （请自行替换username为你的用户名）
+# passwd username （请自行替换username为你的用户名）
+```
+#### 开机自动联网
+
+```shell
+# systemctl enable dhcpcd
+```
+
+#### 网络工具
+
+```shell
+# pacman -Syy net-tools
+```
+
+#### 时间
+
+装完archlinux，时间总是比实际快了8个小时，找了各种办法，最终使用了openNTPD的方法
+
+设置时区：`sudo ln sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`
+
+安装openNTPD：`sudo pacman -S openntpd`
+
+重启openNTPD：`systemctl restart openntpd`
+
+设置开机启动：`systemctl enable openntpd`
+
+
+#### ssh
+安装ssh
+```
+# pacman -Syy openssh
+```
+启动服务
+```
+# systemctl start sshd
+```
+开机启动
+```
+# systemctl enable sshd.service
+```
+
+
+#### aur助手
+[yay](https://github.com/Jguer/yay) 是下一个最好的 AUR 助手。它使用 Go 语言写成，宗旨是提供最少化用户输入的 `pacman` 界面、yaourt 式的搜索，而几乎没有任何依赖软件。
+
+yay 的特性：
+
+- `yay` 提供 AUR 表格补全，并且从 ABS 或 AUR 下载 PKGBUILD
+- 支持收窄搜索，并且不需要引用 PKGBUILD 源
+- `yay` 的二进制文件除了 `pacman` 以外别无依赖
+- 提供先进的包依赖解决方案，以及在编译安装之后移除编译时的依赖
+- 当在 `/etc/pacman.conf` 文件配置中启用了色彩时支持色彩输出
+- `yay` 可被配置成只支持 AUR 或者 repo 里的软件包
+
+安装 yay：
+
+你可以从 `git` 克隆并编译安装。
+
+```
+git clone https://aur.archlinux.org/yay.gitcd yaymakepkg -si
+```
+
+使用 yay：
+
+搜索：
+
+```
+yay -Ss <package-name>
+```
+
+安装：
+
+```
+yay -S <package-name>
+```
+
+
+#### powerline
+Powerline 是 vim、zsh、bash、tmux、IPython、Awesome、bar、fish、lemonbar、pdb、rc、shell、tcsh、wm、i3 和 Qtil 中的一个状态栏插件。它给程序提供了状态栏，并使程序更好看。它用 Python 写成。
 
 ## 命令行
 
@@ -102,25 +187,55 @@ Last login: Sun Sep 16 14:21:35 2018 from 192.168.174.1
 /home/tabris/.zshrc:source:71: permission denied: /root/.oh-my-zsh/oh-my-zsh.sh
 ```
 
-原因是
+---
 
+我这里采用的是`agnoster`主题
+为在使用tmux时不重复显示`whoami@whereami`做两处修改
+- 在`/etc/profile`中添加环境变量
+  ```
+  DEFAULT_USER=$USER
+  ```
+- 在`agnoster`主题文件91行中做如下修改
+  ```git
+  - if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT"]]; then
+  + if [[ "$USER" != "$DEFAULT_USER" || (( -n "$SSH_CLIENT" && -z "$TMUX" )) ]]; then
+  ```
+这样在本地初始打开一个terminal时不会显示,ssh远程连接是时显示
+进入tmux时不会显示
+
+
+原因是
+[Archlinux下安装和配置zsh](https://blog.csdn.net/kingolie/article/details/53066679)
 #### tmux
 
+安装tmux
+ 
+```shell
+sudo pacman -S tmux
+```
 
+在这里配置tmux
+https://github.com/search?utf8=%E2%9C%93&q=tmux&type=
+https://github.com/samoshkin/tmux-config  <--推荐这个配置
+
+[为 vim + tmux 开启真彩色(true color)](http://lotabout.me/2018/true-color-for-tmux-and-vim/)
+
+[tmux进阶之tmuxinator](https://blog.csdn.net/u014717036/article/details/60139776)
 
 #### neovim
 
 > neovim属于vim的加强版  功能更加强大
 
-注意的是  启动neovim的命令式`nvim`而不是`neovim`
+注意的是启动neovim的命令式`nvim`而不是`neovim`
 
+同时安装 [nerd-fonts](https://gitee.com/hustlion-dev/nerd-fonts#option-3-install-script)
 
 
 ##### spacevim
 
 一个定制化的vim配置,支持`vim,neovim`
 
-[官网]()
+[官网](https://spacevim.org/)
 
 
 
@@ -128,19 +243,43 @@ Last login: Sun Sep 16 14:21:35 2018 from 192.168.174.1
 
 检查当前是否为256/真色[参考本篇文章](https://gaomf.cn/2017/01/16/Terminal_Color/)
 
-为了使`TERM=tmux-256color` 将 `export TERM=tmux-256color`加入到每个用户的`.zshrc`中 解决此问题(我这里加到`.zshrc`文件的顶部了) 
 
-**真色的支持还没有**
+我这里的xshell只能支持256色
 
+这时xshell中只有在tmux下spacevim才能显示256色,不支持真色
 
+在.zshrc文件头添加
+```
+sh /${.zshrc的目录}/.change_term.sh
+```
+.change_term.sh文件内容如下
+```shell
+echo "before: $TERM"
+if [ "$TERM" = "linux" ]
+then
+  echo "export TERM=xterm-256color"
+  export TERM=xterm-256color
+elif [ "$TERM" = "xterm" ]
+then
+  echo "export TERM=tmux-direct"
+  export TERM=tmux-direct
+elif [ "$TERM" = "xterm-256color" ]
+then
+  echo "export TERM=xterm-direct"
+  export TERM=xterm-direct
+else
+  echo "export TERM=tmux-256color"
+  export TERM=tmux-256color
+fi
+echo "now: $TERM"
+# 如果是ssh自动启用tmux
+if [ -n "$SSH_CLIENT" ]
+then
+  tmux
+fi
 
-#### TERM
-
-Xshell远程连接 使用
-
-本地采用``
-
-
+clear 
+```
 
 ## 桌面环境
 
@@ -175,14 +314,14 @@ Xshell远程连接 使用
 所有桌面环境都需要依赖xorg。所以先要安装xorg组。
 
 ```shell
-pacman -S xorg1
+pacman -S xorg
 ```
 
 输入命令之后首先会询问要安装xorg组下的哪些包，选择全部。然后对于libgl包有个四个不同的实现，选择mesa-libgl。 
 然后再安装xorg-xinit和xterm：
 
 ```shell
-pacman -S xorg-xinit xterm1
+pacman -S xorg-xinit xterm
 ```
 
 安装完成之后就可以使用startx命令启动xorg的简易界面了。进入成功的话会显示出几个简陋的窗口。然后按Ctrl+D就可以退出了。
@@ -192,7 +331,7 @@ pacman -S xorg-xinit xterm1
 安装xfce4桌面和附带的软件包：
 
 ```shell
-pacman -S xfce4 xfce4-goodies1
+pacman -S xfce4 xfce4-goodies
 ```
 
 #### **4、安装LightDM登录管理器(显示管理器)**
@@ -202,7 +341,7 @@ pacman -S xfce4 xfce4-goodies1
 安装：
 
 ```zsh
-pacman -S lightdm lightdm-gtk-greeter1
+pacman -S lightdm lightdm-gtk-greeter
 ```
 
 其配置文件为：
@@ -219,7 +358,7 @@ systemctl start lightdm.service1
 一切正常，所以设置lightdm为开机自动启动，这样以后开机就不会出现tty命令行界面了，而是直接进入登录界面：
 
 ```shell
-systemctl enable lightdm.service1
+systemctl enable lightdm.service
 ```
 
 之后你可以重启进入xfce4图形界面，然后在图形界面中使用终端来继续以下配置步骤，也可以不重启，直接继续
