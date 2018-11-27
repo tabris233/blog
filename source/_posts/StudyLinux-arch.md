@@ -6,6 +6,9 @@ description: ["Arch 作为'最难'安装的linux系统  通过它可以更好的
 toc: true
 ---
 
+> manjaro 真好用 arch 再见!
+> 桌面环境真的是个大坑啊   
+
 # Arch 踩坑笔记
 
 > 记录一下从0开始玩linux的经历
@@ -86,7 +89,9 @@ yay 的特性：
 你可以从 `git` 克隆并编译安装。
 
 ```
-git clone https://aur.archlinux.org/yay.gitcd yaymakepkg -si
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 ```
 
 使用 yay：
