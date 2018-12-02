@@ -9,7 +9,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>tabris&#39;s Blog</title>
+    <title>设计模式 · tabris&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -251,12 +251,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >tabris&#39;s Blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">设计模式</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>tabris's Blog.</a>
 </header>
@@ -270,96 +281,148 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/jxjy-2B.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            设计模式
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = 开发>开发</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2018/11/18</span>
+                
+                <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                    <span class="iconfont-archer">&#xe602;</span>
+                    <span id="busuanzi_value_page_pv"></span>
+                </span>
+                
+                <span class="shareWrapper">
+                    <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                    <span class="shareText">Share</span>
+                    <ul class="shareList">
+                        <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                            <div class="share-qrcode"></div>
+                        </li>
+                        <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                        <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                        <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                        <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                    </ul>
+                </span>
+            </div>
         
     </div>
 </div>
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
 
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-        <article class="index-post">
-            <a class="abstract-title" href = "/2017/12/31/InternshipSummary/" >
-                
-                    <span>InternshipSummary</span>
-            </a>
-            <div class="abstract-content">
-                Internship Summary
-this is the summary for my six month internship. 
-2018-05-24~
+            <main class="main post-page">
+    <article class="article-entry">
+        <blockquote>
+<p>学习下设计模式</p>
+<p>参考<a href="http://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程</a></p>
+<p>但其实菜鸟教程介绍的比较简略,还是要参考下其他</p>
+</blockquote>
+<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="设计模式的六大原则"><a href="#设计模式的六大原则" class="headerlink" title="设计模式的六大原则"></a>设计模式的六大原则</h2><p><strong>1、开闭原则（Open Close Principle）</strong></p>
+<p>开闭原则的意思是：<strong>对扩展开放，对修改关闭</strong>。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。简言之，是为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类，后面的具体设计中我们会提到这点。</p>
+<p><strong>2、里氏代换原则（Liskov Substitution Principle）</strong></p>
+<p>里氏代换原则是面向对象设计的基本原则之一。 里氏代换原则中说，任何基类可以出现的地方，子类一定可以出现。LSP 是继承复用的基石，只有当派生类可以替换掉基类，且软件单位的功能不受到影响时，基类才能真正被复用，而派生类也能够在基类的基础上增加新的行为。里氏代换原则是对开闭原则的补充。实现开闭原则的关键步骤就是抽象化，而基类与子类的继承关系就是抽象化的具体实现，所以里氏代换原则是对实现抽象化的具体步骤的规范。</p>
+<p><strong>3、依赖倒转原则（Dependence Inversion Principle）</strong></p>
+<p>这个原则是开闭原则的基础，具体内容：针对接口编程，依赖于抽象而不依赖于具体。</p>
+<p><strong>4、接口隔离原则（Interface Segregation Principle）</strong></p>
+<p>这个原则的意思是：使用多个隔离的接口，比使用单个接口要好。它还有另外一个意思是：降低类之间的耦合度。由此可见，其实设计模式就是从大型软件架构出发、便于升级和维护的软件设计思想，它强调降低依赖，降低耦合。</p>
+<p><strong>5、迪米特法则，又称最少知道原则（Demeter Principle）</strong></p>
+<p>最少知道原则是指：一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立。</p>
+<p><strong>6、合成复用原则（Composite Reuse Principle）</strong></p>
+<p>合成复用原则是指：尽量使用合成/聚合的方式，而不是使用继承。</p>
+<h2 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h2><blockquote>
+<p>这些设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用 new 运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。</p>
+</blockquote>
+<h3 id="工厂模式（Factory-Pattern）"><a href="#工厂模式（Factory-Pattern）" class="headerlink" title="工厂模式（Factory Pattern）"></a>工厂模式（Factory Pattern）</h3><p><a href="https://blog.csdn.net/silangquan/article/details/20492293" target="_blank" rel="noopener">C++实现参考 &lt;- 特别赞</a></p>
+<h3 id="抽象工厂模式（Abstract-Factory-Pattern）"><a href="#抽象工厂模式（Abstract-Factory-Pattern）" class="headerlink" title="抽象工厂模式（Abstract Factory Pattern）"></a>抽象工厂模式（Abstract Factory Pattern）</h3><h3 id="单例模式（Singleton-Pattern）"><a href="#单例模式（Singleton-Pattern）" class="headerlink" title="单例模式（Singleton Pattern）"></a>单例模式（Singleton Pattern）</h3><h3 id="建造者模式（Builder-Pattern）"><a href="#建造者模式（Builder-Pattern）" class="headerlink" title="建造者模式（Builder Pattern）"></a>建造者模式（Builder Pattern）</h3><h3 id="原型模式（Prototype-Pattern）"><a href="#原型模式（Prototype-Pattern）" class="headerlink" title="原型模式（Prototype Pattern）"></a>原型模式（Prototype Pattern）</h3><h2 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a><strong>结构型模式</strong></h2><blockquote>
+<p>这些设计模式关注类和对象的组合。继承的概念被用来组合接口和定义组合对象获得新功能的方式。</p>
+</blockquote>
+<h3 id="适配器模式（Adapter-Pattern）"><a href="#适配器模式（Adapter-Pattern）" class="headerlink" title="适配器模式（Adapter Pattern）"></a>适配器模式（Adapter Pattern）</h3><h3 id="桥接模式（Bridge-Pattern）"><a href="#桥接模式（Bridge-Pattern）" class="headerlink" title="桥接模式（Bridge Pattern）"></a>桥接模式（Bridge Pattern）</h3><h3 id="过滤器模式（Filter、Criteria-Pattern）"><a href="#过滤器模式（Filter、Criteria-Pattern）" class="headerlink" title="过滤器模式（Filter、Criteria Pattern）"></a>过滤器模式（Filter、Criteria Pattern）</h3><h3 id="组合模式（Composite-Pattern）"><a href="#组合模式（Composite-Pattern）" class="headerlink" title="组合模式（Composite Pattern）"></a>组合模式（Composite Pattern）</h3><h3 id="装饰器模式（Decorator-Pattern）"><a href="#装饰器模式（Decorator-Pattern）" class="headerlink" title="装饰器模式（Decorator Pattern）"></a>装饰器模式（Decorator Pattern）</h3><h3 id="外观模式（Facade-Pattern）"><a href="#外观模式（Facade-Pattern）" class="headerlink" title="外观模式（Facade Pattern）"></a>外观模式（Facade Pattern）</h3><h3 id="享元模式（Flyweight-Pattern）"><a href="#享元模式（Flyweight-Pattern）" class="headerlink" title="享元模式（Flyweight Pattern）"></a>享元模式（Flyweight Pattern）</h3><h3 id="代理模式（Proxy-Pattern）"><a href="#代理模式（Proxy-Pattern）" class="headerlink" title="代理模式（Proxy Pattern）"></a>代理模式（Proxy Pattern）</h3><h2 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a><strong>行为型模式</strong></h2><h3 id="责任链模式（Chain-of-Responsibility-Pattern）"><a href="#责任链模式（Chain-of-Responsibility-Pattern）" class="headerlink" title="责任链模式（Chain of Responsibility Pattern）"></a>责任链模式（Chain of Responsibility Pattern）</h3><h3 id="命令模式（Command-Pattern）"><a href="#命令模式（Command-Pattern）" class="headerlink" title="命令模式（Command Pattern）"></a>命令模式（Command Pattern）</h3><h3 id="解释器模式（Interpreter-Pattern）"><a href="#解释器模式（Interpreter-Pattern）" class="headerlink" title="解释器模式（Interpreter Pattern）"></a>解释器模式（Interpreter Pattern）</h3><h3 id="迭代器模式（Iterator-Pattern）"><a href="#迭代器模式（Iterator-Pattern）" class="headerlink" title="迭代器模式（Iterator Pattern）"></a>迭代器模式（Iterator Pattern）</h3><h3 id="中介者模式（Mediator-Pattern）"><a href="#中介者模式（Mediator-Pattern）" class="headerlink" title="中介者模式（Mediator Pattern）"></a>中介者模式（Mediator Pattern）</h3><h3 id="备忘录模式（Memento-Pattern）"><a href="#备忘录模式（Memento-Pattern）" class="headerlink" title="备忘录模式（Memento Pattern）"></a>备忘录模式（Memento Pattern）</h3><h3 id="观察者模式（Observer-Pattern）"><a href="#观察者模式（Observer-Pattern）" class="headerlink" title="观察者模式（Observer Pattern）"></a>观察者模式（Observer Pattern）</h3><h3 id="状态模式（State-Pattern）"><a href="#状态模式（State-Pattern）" class="headerlink" title="状态模式（State Pattern）"></a>状态模式（State Pattern）</h3><h3 id="空对象模式（Null-Object-Pattern）"><a href="#空对象模式（Null-Object-Pattern）" class="headerlink" title="空对象模式（Null Object Pattern）"></a>空对象模式（Null Object Pattern）</h3><h3 id="策略模式（Strategy-Pattern）"><a href="#策略模式（Strategy-Pattern）" class="headerlink" title="策略模式（Strategy Pattern）"></a>策略模式（Strategy Pattern）</h3><h3 id="模板模式（Template-Pattern）"><a href="#模板模式（Template-Pattern）" class="headerlink" title="模板模式（Template Pattern）"></a>模板模式（Template Pattern）</h3><h3 id="访问者模式（Visitor-Pattern）"><a href="#访问者模式（Visitor-Pattern）" class="headerlink" title="访问者模式（Visitor Pattern）"></a>访问者模式（Visitor Pattern）</h3>
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/11/18/ProductPattern/" title=  >
+                    <div class="nextTitle">[Untitled Post]</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/09/23/StudyLinux-arch/" title= StudyLinux----arch >
+                    <div class="prevTitle">StudyLinux----arch</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
 
-干了什么5月24日入职.
-半个月后开始参与商户联调.
-6月22号接到手机号同步脚本的需求,7月11号上线
+    <div id="lv-container" data-id="city" data-uid= MTAyMC8zMzU4MS8xMDEzNg>
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
 
-开发用时其实只有两天. 后面进行的是漫长的发布流程,公司内开发工具不熟悉.同时测试也是一个实习生,卡住了几天.
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
 
-同时接到...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/12/31</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = 实习>实习</a>
-    
-</div>
-                
-            </div>
-        </article>
+<!-- City版安装代码已完成 -->
     
     
+    <!--PC版-->
+
+    <!--PC版-->
+
+
     
-        <article class="index-post">
-            <a class="abstract-title" href = "/2017/04/25/StudyOfGit/" >
-                
-                    <span>必须要会的Git基本使用及常用命令操作</span>
-            </a>
-            <div class="abstract-content">
-                之前一直用的svn，后来换了之后才发现git的强大功能，是svn不能比的。缺点就是可能上手比较难一点，刚开始自己研究了两天才摸索出来一些基本使用方法。最近做项目需要建库等等，都用到了git，随着越来越多的使用，也越来有越多的认识。一开始都是别人建好远程库，克隆下来就行了。下面内容只是带你git入门，一些基础的东西，是开发过程中一些基本的操作，单单这些你会用了之后就能发现他的好处，以及使用命令...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/04/25</span>
-                </div>
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = git>git</a>
-    
-</div>
-                
-            </div>
-        </article>
-    
-    <!-- paginator  -->
-    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -451,6 +514,24 @@ this is the summary for my six month internship.
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#设计模式"><span class="toc-number">1.</span> <span class="toc-text">设计模式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#设计模式的六大原则"><span class="toc-number">1.1.</span> <span class="toc-text">设计模式的六大原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建型模式"><span class="toc-number">1.2.</span> <span class="toc-text">创建型模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#工厂模式（Factory-Pattern）"><span class="toc-number">1.2.1.</span> <span class="toc-text">工厂模式（Factory Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#抽象工厂模式（Abstract-Factory-Pattern）"><span class="toc-number">1.2.2.</span> <span class="toc-text">抽象工厂模式（Abstract Factory Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#单例模式（Singleton-Pattern）"><span class="toc-number">1.2.3.</span> <span class="toc-text">单例模式（Singleton Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#建造者模式（Builder-Pattern）"><span class="toc-number">1.2.4.</span> <span class="toc-text">建造者模式（Builder Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原型模式（Prototype-Pattern）"><span class="toc-number">1.2.5.</span> <span class="toc-text">原型模式（Prototype Pattern）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结构型模式"><span class="toc-number">1.3.</span> <span class="toc-text">结构型模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#适配器模式（Adapter-Pattern）"><span class="toc-number">1.3.1.</span> <span class="toc-text">适配器模式（Adapter Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#桥接模式（Bridge-Pattern）"><span class="toc-number">1.3.2.</span> <span class="toc-text">桥接模式（Bridge Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#过滤器模式（Filter、Criteria-Pattern）"><span class="toc-number">1.3.3.</span> <span class="toc-text">过滤器模式（Filter、Criteria Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组合模式（Composite-Pattern）"><span class="toc-number">1.3.4.</span> <span class="toc-text">组合模式（Composite Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#装饰器模式（Decorator-Pattern）"><span class="toc-number">1.3.5.</span> <span class="toc-text">装饰器模式（Decorator Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#外观模式（Facade-Pattern）"><span class="toc-number">1.3.6.</span> <span class="toc-text">外观模式（Facade Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#享元模式（Flyweight-Pattern）"><span class="toc-number">1.3.7.</span> <span class="toc-text">享元模式（Flyweight Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代理模式（Proxy-Pattern）"><span class="toc-number">1.3.8.</span> <span class="toc-text">代理模式（Proxy Pattern）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#行为型模式"><span class="toc-number">1.4.</span> <span class="toc-text">行为型模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#责任链模式（Chain-of-Responsibility-Pattern）"><span class="toc-number">1.4.1.</span> <span class="toc-text">责任链模式（Chain of Responsibility Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令模式（Command-Pattern）"><span class="toc-number">1.4.2.</span> <span class="toc-text">命令模式（Command Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解释器模式（Interpreter-Pattern）"><span class="toc-number">1.4.3.</span> <span class="toc-text">解释器模式（Interpreter Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#迭代器模式（Iterator-Pattern）"><span class="toc-number">1.4.4.</span> <span class="toc-text">迭代器模式（Iterator Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#中介者模式（Mediator-Pattern）"><span class="toc-number">1.4.5.</span> <span class="toc-text">中介者模式（Mediator Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#备忘录模式（Memento-Pattern）"><span class="toc-number">1.4.6.</span> <span class="toc-text">备忘录模式（Memento Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#观察者模式（Observer-Pattern）"><span class="toc-number">1.4.7.</span> <span class="toc-text">观察者模式（Observer Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#状态模式（State-Pattern）"><span class="toc-number">1.4.8.</span> <span class="toc-text">状态模式（State Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#空对象模式（Null-Object-Pattern）"><span class="toc-number">1.4.9.</span> <span class="toc-text">空对象模式（Null Object Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#策略模式（Strategy-Pattern）"><span class="toc-number">1.4.10.</span> <span class="toc-text">策略模式（Strategy Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模板模式（Template-Pattern）"><span class="toc-number">1.4.11.</span> <span class="toc-text">模板模式（Template Pattern）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问者模式（Visitor-Pattern）"><span class="toc-number">1.4.12.</span> <span class="toc-text">访问者模式（Visitor Pattern）</span></a></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -769,6 +850,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
     
     </body>
 </html>
