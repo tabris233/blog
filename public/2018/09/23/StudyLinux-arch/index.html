@@ -363,6 +363,7 @@ height:50vh;
 <blockquote>
 <p><a href="https://www.viseator.com/2017/05/17/arch_install/" target="_blank" rel="noopener">这是最全面的安装指南</a></p>
 </blockquote>
+<p>如果进入不了<code>[root@archiso ]</code> 是物理机安装时 u盘的卷标不是<code>ARCH_20XXYY</code></p>
 <h2 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置:"></a>基础设置:</h2><h4 id="创建新用户"><a href="#创建新用户" class="headerlink" title="创建新用户"></a>创建新用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># useradd -m -G wheel username （请自行替换username为你的用户名）</span><br><span class="line"># passwd username （请自行替换username为你的用户名）</span><br></pre></td></tr></table></figure>
 <h4 id="开机自动联网"><a href="#开机自动联网" class="headerlink" title="开机自动联网"></a>开机自动联网</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> systemctl enable dhcpcd</span><br></pre></td></tr></table></figure>
 <h4 id="网络工具"><a href="#网络工具" class="headerlink" title="网络工具"></a>网络工具</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> pacman -Syy net-tools</span><br></pre></td></tr></table></figure>
@@ -777,26 +778,6 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-archive"> Total : 11 </div>
     
     <div class="post-archive">
@@ -809,7 +790,37 @@ top:50vh;
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/18</span><a class="archive-post-title" href= "/2018/11/18/DesignPattern/" >设计模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/23</span><a class="archive-post-title" href= "/2018/09/23/StudyLinux-arch/" >StudyLinux----arch</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/23</span><a class="archive-post-title" href= "/2018/09/23/GraduationProject/" >GraduationProject</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">03/17</span><a class="archive-post-title" href= "/2018/03/17/ManualOfRegex/" >正则表达式手册</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/07</span><a class="archive-post-title" href= "/2018/03/07/NotesOfPython/" >Python学习笔记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/31</span><a class="archive-post-title" href= "/2018/01/31/ExperienceOfInterview/" >面试经历.</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/29</span><a class="archive-post-title" href= "/2018/01/29/StudyOfInterview/" >面试学习.</a>
         </li>
     
     
@@ -834,36 +845,6 @@ top:50vh;
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/18</span><a class="archive-post-title" href= "/2018/11/18/DesignPattern/" >设计模式</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/23</span><a class="archive-post-title" href= "/2018/09/23/StudyLinux-arch/" >StudyLinux----arch</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/23</span><a class="archive-post-title" href= "/2018/09/23/GraduationProject/" >GraduationProject</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/07</span><a class="archive-post-title" href= "/2018/03/07/NotesOfPython/" >Python学习笔记</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/31</span><a class="archive-post-title" href= "/2018/01/31/ExperienceOfInterview/" >面试经历.</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/29</span><a class="archive-post-title" href= "/2018/01/29/StudyOfInterview/" >面试学习.</a>
-        </li>
     
     
         <li class="archive-post-item">
@@ -894,11 +875,13 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="开发"><span class="iconfont-archer">&#xe606;</span>开发</span>
+    
         <span class="sidebar-tag-name" data-tags="实习"><span class="iconfont-archer">&#xe606;</span>实习</span>
     
-        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
-    
         <span class="sidebar-tag-name" data-tags="毕业设计"><span class="iconfont-archer">&#xe606;</span>毕业设计</span>
+    
+        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
         <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
     
@@ -917,8 +900,6 @@ top:50vh;
         <span class="sidebar-tag-name" data-tags="计算机网络"><span class="iconfont-archer">&#xe606;</span>计算机网络</span>
     
         <span class="sidebar-tag-name" data-tags="大数据"><span class="iconfont-archer">&#xe606;</span>大数据</span>
-    
-        <span class="sidebar-tag-name" data-tags="开发"><span class="iconfont-archer">&#xe606;</span>开发</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

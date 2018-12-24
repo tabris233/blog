@@ -25,6 +25,8 @@ toc: true
 
 > [这是最全面的安装指南](https://www.viseator.com/2017/05/17/arch_install/)
 
+如果进入不了`[root@archiso ]` 是物理机安装时 u盘的卷标不是`ARCH_20XXYY`
+
 ## 基础设置:
 
 #### 创建新用户
@@ -214,7 +216,7 @@ Last login: Sun Sep 16 14:21:35 2018 from 192.168.174.1
 #### tmux
 
 安装tmux
- 
+
 ```shell
 sudo pacman -S tmux
 ```
