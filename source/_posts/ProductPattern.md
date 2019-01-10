@@ -1,3 +1,14 @@
+---
+title: 工厂模式.
+date: 2018-11-18 12:44:08
+categories:  
+tags: [面试,设计模式] #文章标签，可空，多标签请用格式，注意:后面有个空格
+description: 
+toc: true
+---
+
+
+
 http://www.runoob.com/design-pattern/abstract-factory-pattern.html
 
 

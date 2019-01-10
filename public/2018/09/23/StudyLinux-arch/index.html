@@ -361,10 +361,11 @@ height:50vh;
 </blockquote>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装:"></a>安装:</h2><p>这里参考</p>
 <blockquote>
+<p> <strong>注意引导方式建议使用rEFInd 代替教程里采用的grub</strong></p>
 <p><a href="https://www.viseator.com/2017/05/17/arch_install/" target="_blank" rel="noopener">这是最全面的安装指南</a></p>
 </blockquote>
-<p>如果进入不了<code>[root@archiso ]</code> 是物理机安装时 u盘的卷标不是<code>ARCH_20XXYY</code></p>
-<h2 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置:"></a>基础设置:</h2><h4 id="创建新用户"><a href="#创建新用户" class="headerlink" title="创建新用户"></a>创建新用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># useradd -m -G wheel username （请自行替换username为你的用户名）</span><br><span class="line"># passwd username （请自行替换username为你的用户名）</span><br></pre></td></tr></table></figure>
+<p>如果进入不了<code>[root@archiso ]</code> 是物理机安装时 u盘的卷标不是`ARCH_20XXYY</p>
+<h3 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置:"></a>基础设置:</h3><h4 id="创建新用户"><a href="#创建新用户" class="headerlink" title="创建新用户"></a>创建新用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># useradd -m -G wheel username （请自行替换username为你的用户名）</span><br><span class="line"># passwd username （请自行替换username为你的用户名）</span><br></pre></td></tr></table></figure>
 <h4 id="开机自动联网"><a href="#开机自动联网" class="headerlink" title="开机自动联网"></a>开机自动联网</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> systemctl enable dhcpcd</span><br></pre></td></tr></table></figure>
 <h4 id="网络工具"><a href="#网络工具" class="headerlink" title="网络工具"></a>网络工具</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> pacman -Syy net-tools</span><br></pre></td></tr></table></figure>
 <h4 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h4><p>装完archlinux，时间总是比实际快了8个小时，找了各种办法，最终使用了openNTPD的方法</p>
@@ -394,7 +395,7 @@ height:50vh;
 <p>安装：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S &lt;package-name&gt;</span><br></pre></td></tr></table></figure>
 <h4 id="powerline"><a href="#powerline" class="headerlink" title="powerline"></a>powerline</h4><p>Powerline 是 vim、zsh、bash、tmux、IPython、Awesome、bar、fish、lemonbar、pdb、rc、shell、tcsh、wm、i3 和 Qtil 中的一个状态栏插件。它给程序提供了状态栏，并使程序更好看。它用 Python 写成。</p>
-<h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><blockquote>
+<h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><blockquote>
 <p>linux 强大的命令行操作,使效率倍增,所以配置好命令行,并安装实用命令行软件是必要的</p>
 </blockquote>
 <h4 id="zsh-1"><a href="#zsh-1" class="headerlink" title="zsh^1"></a>zsh<a href="[终端环境之Zsh＆oh-my-zsh](https://mtaoist.xyz/2018/03/14/oh-my-zsh/)">^1</a></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S zsh zsh-completions</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 将zsh设为默认shell</span><br><span class="line">chsh -s /bin/zsh</span><br><span class="line"><span class="meta">#</span>其他发行版可先用chsh -l 查看zsh安装位置</span><br></pre></td></tr></table></figure>
@@ -478,7 +479,7 @@ height:50vh;
 <p>这时xshell中只有在tmux下spacevim才能显示256色,不支持真色</p>
 <p>在.zshrc文件头添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh /$&#123;.zshrc的目录&#125;/.change_term.sh</span><br></pre></td></tr></table></figure></p>
 <p>.change_term.sh文件内容如下<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">echo "before: $TERM"</span><br><span class="line">if [ "$TERM" = "linux" ]</span><br><span class="line">then</span><br><span class="line">  echo "export TERM=xterm-256color"</span><br><span class="line">  export TERM=xterm-256color</span><br><span class="line">elif [ "$TERM" = "xterm" ]</span><br><span class="line">then</span><br><span class="line">  echo "export TERM=tmux-direct"</span><br><span class="line">  export TERM=tmux-direct</span><br><span class="line">elif [ "$TERM" = "xterm-256color" ]</span><br><span class="line">then</span><br><span class="line">  echo "export TERM=xterm-direct"</span><br><span class="line">  export TERM=xterm-direct</span><br><span class="line">else</span><br><span class="line">  echo "export TERM=tmux-256color"</span><br><span class="line">  export TERM=tmux-256color</span><br><span class="line">fi</span><br><span class="line">echo "now: $TERM"</span><br><span class="line"><span class="meta">#</span> 如果是ssh自动启用tmux</span><br><span class="line">if [ -n "$SSH_CLIENT" ]</span><br><span class="line">then</span><br><span class="line">  tmux</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">clear</span><br></pre></td></tr></table></figure></p>
-<h2 id="桌面环境"><a href="#桌面环境" class="headerlink" title="桌面环境"></a>桌面环境</h2><blockquote>
+<h3 id="桌面环境"><a href="#桌面环境" class="headerlink" title="桌面环境"></a>桌面环境</h3><blockquote>
 <p><a href="https://blog.csdn.net/kingolie/article/details/76723448" target="_blank" rel="noopener">参考</a></p>
 </blockquote>
 <h4 id="1、安装显卡驱动"><a href="#1、安装显卡驱动" class="headerlink" title="1、安装显卡驱动"></a><strong>1、安装显卡驱动</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># lspci | grep VGA    # 确定显卡型号</span><br><span class="line"># pacman -S &lt;驱动包&gt;</span><br><span class="line">#</span><br><span class="line"># # 官方仓库提供的驱动包：</span><br><span class="line"># # +----------------------+--------------------+--------------+</span><br><span class="line"># # |                      |        开源        |     私有     |</span><br><span class="line"># # +----------------------+--------------------+--------------+</span><br><span class="line"># # |         通用         |   xf86-video-vesa  |              |</span><br><span class="line"># # +----------------------+--------------------+--------------+</span><br><span class="line"># # |         Intel        |  xf86-video-intel  |              |</span><br><span class="line"># # +--------+-------------+--------------------+--------------+</span><br><span class="line"># # |        | GeForce 9+  |                    |    nvidia    |</span><br><span class="line"># # +        +-------------+                    +--------------+</span><br><span class="line"># # | nVidia | GeForce 8/9 | xf86-video-nouveau | nvidia-340xx |</span><br><span class="line"># # +        +-------------+                    +--------------+</span><br><span class="line"># # |        | GeForce 6/7 |                    | nvidia-304xx |</span><br><span class="line"># # +--------+-------------+--------------------+--------------+</span><br><span class="line"># # |        AMD/ATI       |   xf86-video-ati   |              |</span><br><span class="line"># # +----------------------+--------------------+--------------+12345678910111213141516171819</span><br></pre></td></tr></table></figure>
@@ -505,8 +506,8 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/11/18/DesignPattern/" title= 设计模式 >
-                    <div class="nextTitle">设计模式</div>
+                <a href= "/2018/11/18/ProductPattern/" title= 工厂模式. >
+                    <div class="nextTitle">工厂模式.</div>
                 </a>
             
         </li>
@@ -654,7 +655,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Arch-踩坑笔记"><span class="toc-number">1.</span> <span class="toc-text">Arch 踩坑笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.1.</span> <span class="toc-text">安装:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础设置"><span class="toc-number">1.2.</span> <span class="toc-text">基础设置:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建新用户"><span class="toc-number">1.2.0.1.</span> <span class="toc-text">创建新用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#开机自动联网"><span class="toc-number">1.2.0.2.</span> <span class="toc-text">开机自动联网</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络工具"><span class="toc-number">1.2.0.3.</span> <span class="toc-text">网络工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#时间"><span class="toc-number">1.2.0.4.</span> <span class="toc-text">时间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ssh"><span class="toc-number">1.2.0.5.</span> <span class="toc-text">ssh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#aur助手"><span class="toc-number">1.2.0.6.</span> <span class="toc-text">aur助手</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#powerline"><span class="toc-number">1.2.0.7.</span> <span class="toc-text">powerline</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命令行"><span class="toc-number">1.3.</span> <span class="toc-text">命令行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#zsh-1"><span class="toc-number">1.3.0.1.</span> <span class="toc-text">zsh^1</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#oh-my-zsh"><span class="toc-number">1.3.0.1.1.</span> <span class="toc-text">oh-my-zsh</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tmux"><span class="toc-number">1.3.0.2.</span> <span class="toc-text">tmux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#neovim"><span class="toc-number">1.3.0.3.</span> <span class="toc-text">neovim</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#spacevim"><span class="toc-number">1.3.0.3.1.</span> <span class="toc-text">spacevim</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Xshell下256-真色支持"><span class="toc-number">1.3.0.4.</span> <span class="toc-text">*Xshell下256/真色支持</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#桌面环境"><span class="toc-number">1.4.</span> <span class="toc-text">桌面环境</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、安装显卡驱动"><span class="toc-number">1.4.0.1.</span> <span class="toc-text">1、安装显卡驱动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、安装桌面环境"><span class="toc-number">1.4.0.2.</span> <span class="toc-text">2、安装桌面环境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、安装xfce4桌面"><span class="toc-number">1.4.0.3.</span> <span class="toc-text">3、安装xfce4桌面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、安装LightDM登录管理器-显示管理器"><span class="toc-number">1.4.0.4.</span> <span class="toc-text">4、安装LightDM登录管理器(显示管理器)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#桌面美化"><span class="toc-number">1.4.0.5.</span> <span class="toc-text">桌面美化</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Arch-踩坑笔记"><span class="toc-number">1.</span> <span class="toc-text">Arch 踩坑笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.1.</span> <span class="toc-text">安装:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础设置"><span class="toc-number">1.1.1.</span> <span class="toc-text">基础设置:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建新用户"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">创建新用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#开机自动联网"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">开机自动联网</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络工具"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">网络工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#时间"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">时间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ssh"><span class="toc-number">1.1.1.5.</span> <span class="toc-text">ssh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#aur助手"><span class="toc-number">1.1.1.6.</span> <span class="toc-text">aur助手</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#powerline"><span class="toc-number">1.1.1.7.</span> <span class="toc-text">powerline</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命令行"><span class="toc-number">1.1.2.</span> <span class="toc-text">命令行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#zsh-1"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">zsh^1</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#oh-my-zsh"><span class="toc-number">1.1.2.1.1.</span> <span class="toc-text">oh-my-zsh</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tmux"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">tmux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#neovim"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">neovim</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#spacevim"><span class="toc-number">1.1.2.3.1.</span> <span class="toc-text">spacevim</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Xshell下256-真色支持"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">*Xshell下256/真色支持</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#桌面环境"><span class="toc-number">1.1.3.</span> <span class="toc-text">桌面环境</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、安装显卡驱动"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">1、安装显卡驱动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、安装桌面环境"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">2、安装桌面环境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、安装xfce4桌面"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">3、安装xfce4桌面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、安装LightDM登录管理器-显示管理器"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">4、安装LightDM登录管理器(显示管理器)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#桌面美化"><span class="toc-number">1.1.3.5.</span> <span class="toc-text">桌面美化</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -778,12 +779,49 @@ top:50vh;
     
     
     
-    <div class="total-archive"> Total : 11 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 12 </div>
     
     <div class="post-archive">
     
     
     
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/10</span><a class="archive-post-title" href= "/2019/01/10/StudyDocker/" >StudyDocker</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
@@ -791,6 +829,11 @@ top:50vh;
     
         <li class="archive-post-item">
             <span class="archive-post-date">11/18</span><a class="archive-post-title" href= "/2018/11/18/DesignPattern/" >设计模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/18</span><a class="archive-post-title" href= "/2018/11/18/ProductPattern/" >工厂模式.</a>
         </li>
     
     
@@ -824,29 +867,6 @@ top:50vh;
         </li>
     
     
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/11/18/ProductPattern/" >[Untitled Post]</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
         <li class="archive-post-item">
             <span class="archive-post-date">01/25</span><a class="archive-post-title" href= "/2018/01/25/hello-world/" >Hello World</a>
         </li>
@@ -877,19 +897,25 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="开发"><span class="iconfont-archer">&#xe606;</span>开发</span>
     
+        <span class="sidebar-tag-name" data-tags="毕业设计"><span class="iconfont-archer">&#xe606;</span>毕业设计</span>
+    
         <span class="sidebar-tag-name" data-tags="实习"><span class="iconfont-archer">&#xe606;</span>实习</span>
     
-        <span class="sidebar-tag-name" data-tags="毕业设计"><span class="iconfont-archer">&#xe606;</span>毕业设计</span>
+        <span class="sidebar-tag-name" data-tags="面试"><span class="iconfont-archer">&#xe606;</span>面试</span>
+    
+        <span class="sidebar-tag-name" data-tags="设计模式"><span class="iconfont-archer">&#xe606;</span>设计模式</span>
+    
+        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
+    
+        <span class="sidebar-tag-name" data-tags="docker"><span class="iconfont-archer">&#xe606;</span>docker</span>
+    
+        <span class="sidebar-tag-name" data-tags="虚拟化"><span class="iconfont-archer">&#xe606;</span>虚拟化</span>
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
         <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
     
         <span class="sidebar-tag-name" data-tags="正则表达式"><span class="iconfont-archer">&#xe606;</span>正则表达式</span>
-    
-        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
-    
-        <span class="sidebar-tag-name" data-tags="面试"><span class="iconfont-archer">&#xe606;</span>面试</span>
     
         <span class="sidebar-tag-name" data-tags="C++"><span class="iconfont-archer">&#xe606;</span>C++</span>
     

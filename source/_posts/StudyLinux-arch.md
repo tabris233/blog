@@ -23,11 +23,13 @@ toc: true
 
 这里参考
 
+>  **注意引导方式建议使用rEFInd 代替教程里采用的grub**
+>
 > [这是最全面的安装指南](https://www.viseator.com/2017/05/17/arch_install/)
 
-如果进入不了`[root@archiso ]` 是物理机安装时 u盘的卷标不是`ARCH_20XXYY`
+如果进入不了`[root@archiso ]` 是物理机安装时 u盘的卷标不是`ARCH_20XXYY
 
-## 基础设置:
+### 基础设置:
 
 #### 创建新用户
 ```
@@ -114,7 +116,7 @@ yay -S <package-name>
 #### powerline
 Powerline 是 vim、zsh、bash、tmux、IPython、Awesome、bar、fish、lemonbar、pdb、rc、shell、tcsh、wm、i3 和 Qtil 中的一个状态栏插件。它给程序提供了状态栏，并使程序更好看。它用 Python 写成。
 
-## 命令行
+### 命令行
 
 > linux 强大的命令行操作,使效率倍增,所以配置好命令行,并安装实用命令行软件是必要的
 
@@ -288,7 +290,7 @@ fi
 clear 
 ```
 
-## 桌面环境
+### 桌面环境
 
 > [参考](https://blog.csdn.net/kingolie/article/details/76723448)
 
