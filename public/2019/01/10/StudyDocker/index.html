@@ -354,11 +354,24 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>操作环境: Arch </p>
+        <p>操作环境: Arch &amp; manjaro </p>
 <p>docker命令行管理工具使用的<code>dockly</code> 但仍然有缺陷,以后再找找 有没有其他更好用的命令行工具.</p>
 <p>教程先看了一遍 <a href="https://www.bilibili.com/video/av27122140" target="_blank" rel="noopener">B站的尚硅谷教程</a> 有些av号的顺序不对.  看这个就行了.</p>
 <p>tabris’s 阿里云镜像加速器: <a href="https://oj7znbfj.mirror.aliyuncs.com" target="_blank" rel="noopener">https://oj7znbfj.mirror.aliyuncs.com</a></p>
-
+<h1 id="安装篇"><a href="#安装篇" class="headerlink" title="安装篇"></a>安装篇</h1><p>命令安装<code>docker</code>本体</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S docker</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>同时建议安装<code>dockly</code>作为docker的命令行管理软件.</p>
+<p><a href="https://www.npmjs.com/package/dockly" target="_blank" rel="noopener">https://www.npmjs.com/package/dockly</a></p>
+</blockquote>
+<p>非root用户运行docker是执行如下命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo usermod -aG docker  $USER #your usrname</span><br></pre></td></tr></table></figure>
+<p>执行如下命令启动docker服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service docker start</span><br></pre></td></tr></table></figure>
+<h2 id="镜像加速"><a href="#镜像加速" class="headerlink" title="镜像加速"></a>镜像加速</h2><p>鉴于国内网络问题，后续拉取 Docker 镜像十分缓慢，我们可以需要配置加速器来解决，我使用的是阿里云的镜像加速器: <a href="https://oj7znbfj.mirror.aliyuncs.com" target="_blank" rel="noopener">https://oj7znbfj.mirror.aliyuncs.com</a></p>
+<p>新版的 <code>Docker</code> 使用 <code>/etc/docker/daemon.json（Linux）</code> 或者 <code>%programdata%\docker\config\daemon.json（Windows）</code> 来配置 <code>Daemon</code>。</p>
+<p>请在该配置文件中加入（没有该文件的话，请先建一个）：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"registry-mirrors"</span>: [<span class="string">"https://oj7znbfj.mirror.aliyuncs.com"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </article>
     <!-- 前后页  -->
     <ul class="post-paginator">
@@ -509,7 +522,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装篇"><span class="toc-number">1.</span> <span class="toc-text">安装篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#镜像加速"><span class="toc-number">1.1.</span> <span class="toc-text">镜像加速</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -522,14 +535,6 @@ top:50vh;
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -751,21 +756,21 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="开发"><span class="iconfont-archer">&#xe606;</span>开发</span>
     
-        <span class="sidebar-tag-name" data-tags="毕业设计"><span class="iconfont-archer">&#xe606;</span>毕业设计</span>
-    
         <span class="sidebar-tag-name" data-tags="实习"><span class="iconfont-archer">&#xe606;</span>实习</span>
+    
+        <span class="sidebar-tag-name" data-tags="毕业设计"><span class="iconfont-archer">&#xe606;</span>毕业设计</span>
     
         <span class="sidebar-tag-name" data-tags="面试"><span class="iconfont-archer">&#xe606;</span>面试</span>
     
         <span class="sidebar-tag-name" data-tags="设计模式"><span class="iconfont-archer">&#xe606;</span>设计模式</span>
+    
+        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
         <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
     
         <span class="sidebar-tag-name" data-tags="docker"><span class="iconfont-archer">&#xe606;</span>docker</span>
     
         <span class="sidebar-tag-name" data-tags="虚拟化"><span class="iconfont-archer">&#xe606;</span>虚拟化</span>
-    
-        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
         <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
     
