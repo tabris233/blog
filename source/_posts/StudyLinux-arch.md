@@ -7,6 +7,9 @@ toc: true
 ---
 
 > manjaro 真好用 arch 再见!
+>
+> 推荐manjaro-deepin 对中文的支持比较好
+>
 > 桌面环境真的是个大坑啊   
 
 # Arch 踩坑笔记
@@ -115,6 +118,14 @@ yay -S <package-name>
 
 #### powerline
 Powerline 是 vim、zsh、bash、tmux、IPython、Awesome、bar、fish、lemonbar、pdb、rc、shell、tcsh、wm、i3 和 Qtil 中的一个状态栏插件。它给程序提供了状态栏，并使程序更好看。它用 Python 写成。
+
+
+
+#### VPN
+
+electron-ssr : GUI的界面.很好用
+
+
 
 ### 命令行
 
@@ -290,6 +301,44 @@ fi
 clear 
 ```
 
+glances: 代替htop
+
+ranger: 
+
+tig: git的命令行管理软件
+
+dockly: docker的命令行管理软件
+
+
+
+### 常用软件
+
+#### 编辑器&IDE
+
+JetBrains ToolBox: JB全家桶,管理Clion,IDEA,PyCharm项目
+
+code::blocks
+
+vscode:
+
+Typora: markdown编辑器
+
+#### 终端
+
+Yakuake: 悬挂式命令行,很方便
+
+
+
+GitKraken: git的图形化管理软件
+
+网易云音乐
+
+google-chrome
+
+docker
+
+
+
 ### 桌面环境
 
 > [参考](https://blog.csdn.net/kingolie/article/details/76723448)
@@ -377,6 +426,8 @@ systemctl enable lightdm.service
 
 
 #### 桌面美化
+
+好好干活,美化个屁.
 
 
 
