@@ -354,6 +354,7 @@ height:50vh;
 <p>manjaro 真好用 arch 再见!</p>
 <p>推荐manjaro-deepin 对中文的支持比较好</p>
 <p>桌面环境真的是个大坑啊   </p>
+<p>争取能做出来一个安装+部署配置的脚本</p>
 </blockquote>
 <h1 id="Arch-踩坑笔记"><a href="#Arch-踩坑笔记" class="headerlink" title="Arch 踩坑笔记"></a>Arch 踩坑笔记</h1><blockquote>
 <p>记录一下从0开始玩linux的经历</p>
@@ -367,10 +368,10 @@ height:50vh;
 <p><a href="https://www.viseator.com/2017/05/17/arch_install/" target="_blank" rel="noopener">这是最全面的安装指南</a></p>
 </blockquote>
 <p>如果进入不了<code>[root@archiso ]</code> 是物理机安装时 u盘的卷标不是`ARCH_20XXYY</p>
-<h3 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置:"></a>基础设置:</h3><h4 id="创建新用户"><a href="#创建新用户" class="headerlink" title="创建新用户"></a>创建新用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># useradd -m -G wheel username （请自行替换username为你的用户名）</span><br><span class="line"># passwd username （请自行替换username为你的用户名）</span><br></pre></td></tr></table></figure>
+<h3 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置:"></a>基础设置:</h3><h4 id="创建新用户"><a href="#创建新用户" class="headerlink" title="创建新用户"></a>创建新用户</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># useradd -m -G wheel &lt;username&gt; （请自行替换username为你的用户名）</span><br><span class="line"># passwd &lt;username&gt; （请自行替换username为你的用户名）</span><br></pre></td></tr></table></figure>
 <h4 id="开机自动联网"><a href="#开机自动联网" class="headerlink" title="开机自动联网"></a>开机自动联网</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> systemctl enable dhcpcd</span><br></pre></td></tr></table></figure>
 <h4 id="网络工具"><a href="#网络工具" class="headerlink" title="网络工具"></a>网络工具</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> pacman -Syy net-tools</span><br></pre></td></tr></table></figure>
-<h4 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h4><p>装完archlinux，时间总是比实际快了8个小时，找了各种办法，最终使用了openNTPD的方法</p>
+<h4 id="时间"><a href="#时间" class="headerlink" title="时间"></a>时间</h4><p>装完archlinux，因为时区的问题，时间总是比实际快了8个小时，找了各种办法，最终使用了openNTPD的方法</p>
 <p>设置时区：<code>sudo ln sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</code></p>
 <p>安装openNTPD：<code>sudo pacman -S openntpd</code></p>
 <p>重启openNTPD：<code>systemctl restart openntpd</code></p>
@@ -397,7 +398,7 @@ height:50vh;
 <p>安装：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S &lt;package-name&gt;</span><br></pre></td></tr></table></figure>
 <h4 id="powerline"><a href="#powerline" class="headerlink" title="powerline"></a>powerline</h4><p>Powerline 是 vim、zsh、bash、tmux、IPython、Awesome、bar、fish、lemonbar、pdb、rc、shell、tcsh、wm、i3 和 Qtil 中的一个状态栏插件。它给程序提供了状态栏，并使程序更好看。它用 Python 写成。</p>
-<h4 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h4><p>electron-ssr : GUI的界面.很好用</p>
+<h4 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h4><p>electron-ssr : GUI的界面的ssr.很好用</p>
 <h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><blockquote>
 <p>linux 强大的命令行操作,使效率倍增,所以配置好命令行,并安装实用命令行软件是必要的</p>
 </blockquote>
@@ -451,9 +452,6 @@ height:50vh;
 </li>
 </ul>
 <hr>
-<p>我这里是在root下安装的,在<code>zsh</code>与<code>oh-my-zsh</code>的使用中,发现切换用户会出现错误</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Last login: Sun Sep 16 14:21:35 2018 from 192.168.174.1</span><br><span class="line">/home/tabris/.zshrc:source:71: permission denied: /root/.oh-my-zsh/oh-my-zsh.sh</span><br></pre></td></tr></table></figure>
-<hr>
 <p>我这里采用的是<code>agnoster</code>主题<br>为在使用tmux时不重复显示<code>whoami@whereami</code>做两处修改</p>
 <ul>
 <li><p>在<code>/etc/profile</code>中添加环境变量</p>
@@ -461,9 +459,9 @@ height:50vh;
 </li>
 <li><p>在<code>agnoster</code>主题文件91行中做如下修改</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- if [[ &quot;$USER&quot; != &quot;$DEFAULT_USER&quot; || -n &quot;$SSH_CLIENT&quot;]]; then</span><br><span class="line">+ if [[ &quot;$USER&quot; != &quot;$DEFAULT_USER&quot; || (( -n &quot;$SSH_CLIENT&quot; &amp;&amp; -z &quot;$TMUX&quot; )) ]]; then</span><br></pre></td></tr></table></figure>
+<p>这样在本地初始打开一个terminal时不会显示,ssh远程连接是时显示<br>进入tmux时不会显示</p>
 </li>
 </ul>
-<p>这样在本地初始打开一个terminal时不会显示,ssh远程连接是时显示<br>进入tmux时不会显示</p>
 <p>原因是<br><a href="https://blog.csdn.net/kingolie/article/details/53066679" target="_blank" rel="noopener">Archlinux下安装和配置zsh</a></p>
 <h4 id="tmux"><a href="#tmux" class="headerlink" title="tmux"></a>tmux</h4><p>安装tmux</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S tmux</span><br></pre></td></tr></table></figure>
@@ -474,21 +472,25 @@ height:50vh;
 <p>neovim属于vim的加强版  功能更加强大</p>
 </blockquote>
 <p>注意的是启动neovim的命令式<code>nvim</code>而不是<code>neovim</code></p>
-<p>同时安装 <a href="https://gitee.com/hustlion-dev/nerd-fonts#option-3-install-script" target="_blank" rel="noopener">nerd-fonts</a></p>
-<h5 id="spacevim"><a href="#spacevim" class="headerlink" title="spacevim"></a>spacevim</h5><p>一个定制化的vim配置,支持<code>vim,neovim</code></p>
+<p>同时安装 <a href="https://gitee.com/hustlion-dev/nerd-fonts#option-3-install-script" target="_blank" rel="noopener">nerd-fonts</a> </p>
+<blockquote>
+<p>如果安装spacevim 则不需要手动安装nerd-fonts</p>
+</blockquote>
+<h5 id="spacevim"><a href="#spacevim" class="headerlink" title="spacevim"></a>spacevim</h5><p>一个定制化的vim配置,支持<code>vim,neovim</code> </p>
 <p><a href="https://spacevim.org/" target="_blank" rel="noopener">官网</a></p>
 <h4 id="Xshell下256-真色支持"><a href="#Xshell下256-真色支持" class="headerlink" title="*Xshell下256/真色支持"></a>*Xshell下256/真色支持</h4><p>检查当前是否为256/真色<a href="https://gaomf.cn/2017/01/16/Terminal_Color/" target="_blank" rel="noopener">参考本篇文章</a></p>
 <p>我这里的xshell只能支持256色</p>
 <p>这时xshell中只有在tmux下spacevim才能显示256色,不支持真色</p>
 <p>在.zshrc文件头添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh /$&#123;.zshrc的目录&#125;/.change_term.sh</span><br></pre></td></tr></table></figure></p>
 <p>.change_term.sh文件内容如下<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">echo "before: $TERM"</span><br><span class="line">if [ "$TERM" = "linux" ]</span><br><span class="line">then</span><br><span class="line">  echo "export TERM=xterm-256color"</span><br><span class="line">  export TERM=xterm-256color</span><br><span class="line">elif [ "$TERM" = "xterm" ]</span><br><span class="line">then</span><br><span class="line">  echo "export TERM=tmux-direct"</span><br><span class="line">  export TERM=tmux-direct</span><br><span class="line">elif [ "$TERM" = "xterm-256color" ]</span><br><span class="line">then</span><br><span class="line">  echo "export TERM=xterm-direct"</span><br><span class="line">  export TERM=xterm-direct</span><br><span class="line">else</span><br><span class="line">  echo "export TERM=tmux-256color"</span><br><span class="line">  export TERM=tmux-256color</span><br><span class="line">fi</span><br><span class="line">echo "now: $TERM"</span><br><span class="line"><span class="meta">#</span> 如果是ssh自动启用tmux</span><br><span class="line">if [ -n "$SSH_CLIENT" ]</span><br><span class="line">then</span><br><span class="line">  tmux</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">clear</span><br></pre></td></tr></table></figure></p>
-<p>glances: 代替htop</p>
-<p>ranger: </p>
+<p>glances: 代替htop的资源监控工具</p>
+<p>ranger: ranger是一个以<a href="https://baike.baidu.com/item/GPL" target="_blank" rel="noopener">GPL</a>许可证发放源码，默认使用VIM风格键盘绑定、<a href="https://baike.baidu.com/item/curses/1630775" target="_blank" rel="noopener">curses</a>图形库，基于字符终端的<a href="https://baike.baidu.com/item/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8/8716754" target="_blank" rel="noopener">文件管理器</a>，是自由免费软件。</p>
 <p>tig: git的命令行管理软件</p>
 <p>dockly: docker的命令行管理软件</p>
+<p>wtfutil: 基于 Terminal 的个人 dashboard 实用程序，专为显示不常用的但非常重要的日常数据而设计</p>
 <h3 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h3><h4 id="编辑器-amp-IDE"><a href="#编辑器-amp-IDE" class="headerlink" title="编辑器&amp;IDE"></a>编辑器&amp;IDE</h4><p>JetBrains ToolBox: JB全家桶,管理Clion,IDEA,PyCharm项目</p>
 <p>code::blocks</p>
-<p>vscode:</p>
+<p>vscode: </p>
 <p>Typora: markdown编辑器</p>
 <h4 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h4><p>Yakuake: 悬挂式命令行,很方便</p>
 <p>GitKraken: git的图形化管理软件</p>
@@ -498,7 +500,7 @@ height:50vh;
 <h3 id="桌面环境"><a href="#桌面环境" class="headerlink" title="桌面环境"></a>桌面环境</h3><blockquote>
 <p><a href="https://blog.csdn.net/kingolie/article/details/76723448" target="_blank" rel="noopener">参考</a></p>
 </blockquote>
-<h4 id="1、安装显卡驱动"><a href="#1、安装显卡驱动" class="headerlink" title="1、安装显卡驱动"></a><strong>1、安装显卡驱动</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># lspci | grep VGA    # 确定显卡型号</span><br><span class="line"># pacman -S &lt;驱动包&gt;</span><br><span class="line">#</span><br><span class="line"># # 官方仓库提供的驱动包：</span><br><span class="line"># # +----------------------+--------------------+--------------+</span><br><span class="line"># # |                      |        开源        |     私有     |</span><br><span class="line"># # +----------------------+--------------------+--------------+</span><br><span class="line"># # |         通用         |   xf86-video-vesa  |              |</span><br><span class="line"># # +----------------------+--------------------+--------------+</span><br><span class="line"># # |         Intel        |  xf86-video-intel  |              |</span><br><span class="line"># # +--------+-------------+--------------------+--------------+</span><br><span class="line"># # |        | GeForce 9+  |                    |    nvidia    |</span><br><span class="line"># # +        +-------------+                    +--------------+</span><br><span class="line"># # | nVidia | GeForce 8/9 | xf86-video-nouveau | nvidia-340xx |</span><br><span class="line"># # +        +-------------+                    +--------------+</span><br><span class="line"># # |        | GeForce 6/7 |                    | nvidia-304xx |</span><br><span class="line"># # +--------+-------------+--------------------+--------------+</span><br><span class="line"># # |        AMD/ATI       |   xf86-video-ati   |              |</span><br><span class="line"># # +----------------------+--------------------+--------------+12345678910111213141516171819</span><br></pre></td></tr></table></figure>
+<h4 id="1、安装显卡驱动"><a href="#1、安装显卡驱动" class="headerlink" title="1、安装显卡驱动"></a><strong>1、安装显卡驱动</strong></h4><figure class="highlight zsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># lspci | grep VGA    # 确定显卡型号</span></span><br><span class="line"><span class="comment"># pacman -S &lt;驱动包&gt;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># # 官方仓库提供的驱动包：</span></span><br><span class="line"><span class="comment"># # +----------------------+--------------------+--------------+</span></span><br><span class="line"><span class="comment"># # |                      |        开源        |     私有     |</span></span><br><span class="line"><span class="comment"># # +----------------------+--------------------+--------------+</span></span><br><span class="line"><span class="comment"># # |         通用         |   xf86-video-vesa  |              |</span></span><br><span class="line"><span class="comment"># # +----------------------+--------------------+--------------+</span></span><br><span class="line"><span class="comment"># # |         Intel        |  xf86-video-intel  |              |</span></span><br><span class="line"><span class="comment"># # +--------+-------------+--------------------+--------------+</span></span><br><span class="line"><span class="comment"># # |        | GeForce 9+  |                    |    nvidia    |</span></span><br><span class="line"><span class="comment"># # +        +-------------+                    +--------------+</span></span><br><span class="line"><span class="comment"># # | nVidia | GeForce 8/9 | xf86-video-nouveau | nvidia-340xx |</span></span><br><span class="line"><span class="comment"># # +        +-------------+                    +--------------+</span></span><br><span class="line"><span class="comment"># # |        | GeForce 6/7 |                    | nvidia-304xx |</span></span><br><span class="line"><span class="comment"># # +--------+-------------+--------------------+--------------+</span></span><br><span class="line"><span class="comment"># # |        AMD/ATI       |   xf86-video-ati   |              |</span></span><br><span class="line"><span class="comment"># # +----------------------+--------------------+--------------+12345678910111213141516171819</span></span><br></pre></td></tr></table></figure>
 <h4 id="2、安装桌面环境"><a href="#2、安装桌面环境" class="headerlink" title="2、安装桌面环境"></a><strong>2、安装桌面环境</strong></h4><p>所有桌面环境都需要依赖xorg。所以先要安装xorg组。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S xorg</span><br></pre></td></tr></table></figure>
 <p>输入命令之后首先会询问要安装xorg组下的哪些包，选择全部。然后对于libgl包有个四个不同的实现，选择mesa-libgl。<br>然后再安装xorg-xinit和xterm：</p>
@@ -515,7 +517,7 @@ height:50vh;
 <p>之后你可以重启进入xfce4图形界面，然后在图形界面中使用终端来继续以下配置步骤，也可以不重启，直接继续</p>
 <p>进入xfce4图形界面的命令为<code>startxfce4</code></p>
 <h4 id="桌面美化"><a href="#桌面美化" class="headerlink" title="桌面美化"></a>桌面美化</h4><p>好好干活,美化个屁.</p>
-<p><a href="[终端环境之Zsh＆oh-my-zsh](https://mtaoist.xyz/2018/03/14/oh-my-zsh/)">^1</a>: </p>
+<p><a href="[终端环境之Zsh＆oh-my-zsh](https://mtaoist.xyz/2018/03/14/oh-my-zsh/)">^1</a>:</p>
 
     </article>
     <!-- 前后页  -->
@@ -807,6 +809,10 @@ top:50vh;
     
     
     
+    
+    
+    
+    
     <div class="total-archive"> Total : 12 </div>
     
     <div class="post-archive">
@@ -916,9 +922,9 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="虚拟化"><span class="iconfont-archer">&#xe606;</span>虚拟化</span>
     
-        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
-    
         <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
+    
+        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
         <span class="sidebar-tag-name" data-tags="正则表达式"><span class="iconfont-archer">&#xe606;</span>正则表达式</span>
     

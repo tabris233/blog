@@ -11,6 +11,10 @@ toc: true
 > 推荐manjaro-deepin 对中文的支持比较好
 >
 > 桌面环境真的是个大坑啊   
+>
+>  
+>
+> 争取能做出来一个安装+部署配置的脚本
 
 # Arch 踩坑笔记
 
@@ -36,8 +40,8 @@ toc: true
 
 #### 创建新用户
 ```
-# useradd -m -G wheel username （请自行替换username为你的用户名）
-# passwd username （请自行替换username为你的用户名）
+# useradd -m -G wheel <username> （请自行替换username为你的用户名）
+# passwd <username> （请自行替换username为你的用户名）
 ```
 #### 开机自动联网
 
@@ -53,7 +57,7 @@ toc: true
 
 #### 时间
 
-装完archlinux，时间总是比实际快了8个小时，找了各种办法，最终使用了openNTPD的方法
+装完archlinux，因为时区的问题，时间总是比实际快了8个小时，找了各种办法，最终使用了openNTPD的方法
 
 设置时区：`sudo ln sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`
 
@@ -63,8 +67,8 @@ toc: true
 
 设置开机启动：`systemctl enable openntpd`
 
-
 #### ssh
+
 安装ssh
 ```
 # pacman -Syy openssh
@@ -116,14 +120,16 @@ yay -S <package-name>
 ```
 
 
+
 #### powerline
+
 Powerline 是 vim、zsh、bash、tmux、IPython、Awesome、bar、fish、lemonbar、pdb、rc、shell、tcsh、wm、i3 和 Qtil 中的一个状态栏插件。它给程序提供了状态栏，并使程序更好看。它用 Python 写成。
 
 
 
 #### VPN
 
-electron-ssr : GUI的界面.很好用
+electron-ssr : GUI的界面的ssr.很好用
 
 
 
@@ -200,17 +206,9 @@ chsh -s /bin/zsh
 
 ---
 
-我这里是在root下安装的,在`zsh`与`oh-my-zsh`的使用中,发现切换用户会出现错误
-
-```shell
-Last login: Sun Sep 16 14:21:35 2018 from 192.168.174.1
-/home/tabris/.zshrc:source:71: permission denied: /root/.oh-my-zsh/oh-my-zsh.sh
-```
-
----
-
 我这里采用的是`agnoster`主题
 为在使用tmux时不重复显示`whoami@whereami`做两处修改
+
 - 在`/etc/profile`中添加环境变量
   ```
   DEFAULT_USER=$USER
@@ -220,12 +218,12 @@ Last login: Sun Sep 16 14:21:35 2018 from 192.168.174.1
   - if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT"]]; then
   + if [[ "$USER" != "$DEFAULT_USER" || (( -n "$SSH_CLIENT" && -z "$TMUX" )) ]]; then
   ```
-这样在本地初始打开一个terminal时不会显示,ssh远程连接是时显示
-进入tmux时不会显示
-
+  这样在本地初始打开一个terminal时不会显示,ssh远程连接是时显示
+  进入tmux时不会显示
 
 原因是
 [Archlinux下安装和配置zsh](https://blog.csdn.net/kingolie/article/details/53066679)
+
 #### tmux
 
 安装tmux
@@ -248,12 +246,13 @@ https://github.com/samoshkin/tmux-config  <--推荐这个配置
 
 注意的是启动neovim的命令式`nvim`而不是`neovim`
 
-同时安装 [nerd-fonts](https://gitee.com/hustlion-dev/nerd-fonts#option-3-install-script)
+同时安装 [nerd-fonts](https://gitee.com/hustlion-dev/nerd-fonts#option-3-install-script) 
 
+> 如果安装spacevim 则不需要手动安装nerd-fonts
 
 ##### spacevim
 
-一个定制化的vim配置,支持`vim,neovim`
+一个定制化的vim配置,支持`vim,neovim` 
 
 [官网](https://spacevim.org/)
 
@@ -301,15 +300,15 @@ fi
 clear 
 ```
 
-glances: 代替htop
+glances: 代替htop的资源监控工具
 
-ranger: 
+ranger: ranger是一个以[GPL](https://baike.baidu.com/item/GPL)许可证发放源码，默认使用VIM风格键盘绑定、[curses](https://baike.baidu.com/item/curses/1630775)图形库，基于字符终端的[文件管理器](https://baike.baidu.com/item/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8/8716754)，是自由免费软件。
 
 tig: git的命令行管理软件
 
 dockly: docker的命令行管理软件
 
-
+wtfutil: 基于 Terminal 的个人 dashboard 实用程序，专为显示不常用的但非常重要的日常数据而设计
 
 ### 常用软件
 
@@ -319,7 +318,7 @@ JetBrains ToolBox: JB全家桶,管理Clion,IDEA,PyCharm项目
 
 code::blocks
 
-vscode:
+vscode: 
 
 Typora: markdown编辑器
 
@@ -345,7 +344,7 @@ docker
 
 #### **1、安装显卡驱动**
 
-```
+```zsh
 # lspci | grep VGA    # 确定显卡型号
 # pacman -S <驱动包>
 #
@@ -431,4 +430,4 @@ systemctl enable lightdm.service
 
 
 
-[^1]: 
+[^1]:
