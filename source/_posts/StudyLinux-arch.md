@@ -218,7 +218,7 @@ chsh -s /bin/zsh
   - if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT"]]; then
   + if [[ "$USER" != "$DEFAULT_USER" || (( -n "$SSH_CLIENT" && -z "$TMUX" )) ]]; then
   ```
-  这样在本地初始打开一个terminal时不会显示,ssh远程连接时显示
+  这样在本地初始打开一个terminal时不会显示,ssh远程连接是时显示
   进入tmux时不会显示
 
 原因是
@@ -322,8 +322,6 @@ vscode:
 
 Typora: markdown编辑器
 
-GeoGebra: linux的几何画板。
-
 #### 终端
 
 Yakuake: 悬挂式命令行,很方便
@@ -337,6 +335,10 @@ GitKraken: git的图形化管理软件
 google-chrome
 
 docker
+
+
+
+albert: linux下的启动器 
 
 
 
