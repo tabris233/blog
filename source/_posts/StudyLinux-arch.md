@@ -268,7 +268,7 @@ https://github.com/samoshkin/tmux-config  <--推荐这个配置
 这时xshell中只有在tmux下spacevim才能显示256色,不支持真色
 
 在.zshrc文件头添加
-```
+```shell
 sh /${.zshrc的目录}/.change_term.sh
 ```
 .change_term.sh文件内容如下
@@ -326,17 +326,45 @@ Typora: markdown编辑器
 
 Yakuake: 悬挂式命令行,很方便
 
-
+#### 开发工具
 
 GitKraken: git的图形化管理软件
 
+: (文件对比工具)
+
+#### 影音
+
 网易云音乐
+
+#### 浏览器
 
 google-chrome
 
+#### 通讯工具
+
+deepin.com.qq.office： tim
+
+deepin-wechat： 微信
+
+> wine程序字体dpi太小导致视觉观感很难受
+>
+> 调整DPI字体
+>
+> 1，先退出deepin-tim或deepin-qq，否则会提示错误。
+>
+> 2，运行**env WINEPREFIX="$HOME/.deepinwine/Deepin-TIM" winecfg**（如果是修改QQ界面字体大小，就把Deepin-TIM改成Deepin-QQ），然后将屏幕分辨率拖放到合适的大小（一般120就可以了）。
+
+gitter:
+
+telegram:
+
+#### 虚拟机
+
 docker
 
+virtualbox
 
+#### helper
 
 albert: linux下的启动器 
 
@@ -345,6 +373,8 @@ albert: linux下的启动器
 ### 桌面环境
 
 > [参考](https://blog.csdn.net/kingolie/article/details/76723448)
+>
+> 如果安装manjaro 就不需要手动安装这些了
 
 #### **1、安装显卡驱动**
 
