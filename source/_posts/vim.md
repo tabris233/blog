@@ -1,5 +1,5 @@
 ---
-title: vim使用心得
+title: vim使用心得(过会儿再写)
 date: 2019-03-11 15:33:11
 categories:  
 tags: [editor] #文章标签，可空，多标签请用格式，注意:后面有个空格
@@ -25,7 +25,7 @@ vim主要有以下几个优点.
 - 系统资源占用小，打开大文件毫无压力。
 - 键盘命令变成肌肉记忆以后，操作速度极快。
 
-同时现今很多开源软件采用的快捷键都与vim类似.学习vim变得很有必要.
+同时现今很多开源软件(ranger,lazygit)采用的快捷键都与vim类似.学习vim变得很有必要.
 
 但我这里采用的是`neovim`
 
@@ -104,11 +104,41 @@ call plug#end()
 
 如你所见，使用 Vim-plug 管理插件并不难。它简化了插件管理。现在去找出你最喜欢的插件并使用 Vim-plug 来安装它们。
 
-## 安装插件
+# 安装插件
+
+## 工具篇
 
 ### 安装[vim中文手册](https://github.com/yianwillis/vimcdoc)
 
 `Plug 'yianwillis/vimcdoc'`
+
+### 安装自动补全工具
+
+vim要有python支持,如果没有需要输入`pip install neovim`命令安装neovim的python支持模块.
+
+`Plug 'Valloric/YouCompleteMe'`
+
+上面的插件对C++的支持是很强大的但是在麻烦.后来改用`deoplete`了
+
+`Plug 'Shougo/deoplete.nvim'                        "代码补全
+
+
+
+Plug 'jiangmiao/auto-pairs'                        "括号自动补全    
+Plug 'tpope/vim-fugitive'                          "git plugin     
+Plug 'scrooloose/nerdtree'                         "文件浏览器    
+Plug 'majutsushi/tagbar'                           "浏览tag    
+Plug 'mg979/vim-visual-multi'                      "多光标    
+
+Plug 'mhinz/vim-startify'                              "start page
+
+Plug 'neomake/neomake'                             "语法检查
+
+## **美化篇**
+
+### 安装主题
+
+`Plug 'chxuan/change-colorscheme'                   "主题切换插件    `
 
 ### 安装状态栏插件
 
@@ -116,15 +146,9 @@ call plug#end()
  　　这里使用的是 [airline ](https://link.jianshu.com?t=https%3A%2F%2Fgithub.com%2Fvim-airline%2Fvim-airline)：
 
 ```
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'                     "状态栏工具    
+Plug 'vim-airline/vim-airline-themes'              "状态栏主题    
 ```
 
-### 安装主题
-
-### 安装自动补全工具
-
-vim要有python支持,如果没有需要输入`pip install neovim`命令安装neovim的python支持模块.
-
-`Plug 'Valloric/YouCompleteMe'`
+###
 
