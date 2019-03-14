@@ -112,7 +112,7 @@ call plug#end()
 
 `Plug 'yianwillis/vimcdoc'`
 
-### 安装自动补全工具
+### 编码优化插件
 
 vim要有python支持,如果没有需要输入`pip install neovim`命令安装neovim的python支持模块.
 
@@ -120,25 +120,58 @@ vim要有python支持,如果没有需要输入`pip install neovim`命令安装ne
 
 上面的插件对C++的支持是很强大的但是在麻烦.后来改用`deoplete`了
 
-`Plug 'Shougo/deoplete.nvim'                        "代码补全
+```
+Plug 'shougo/unite.vim'                            " deoplete依赖
+Plug 'Shougo/deoplete.nvim'                        " 代码补全
+Plug 'jiangmiao/auto-pairs'                        " 括号自动补全
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/syntastic'                        " 静态代码分析
+Plug 'neomake/neomake'                             " 语法检查
+Plug 'mg979/vim-visual-multi'                      " 多光标 
+```
 
+### GitHelp
 
+```
+Plug 'tpope/vim-fugitive'                          " git plugin
+Plug 'airblade/vim-gitgutter'                      "
+```
 
-Plug 'jiangmiao/auto-pairs'                        "括号自动补全    
-Plug 'tpope/vim-fugitive'                          "git plugin     
-Plug 'scrooloose/nerdtree'                         "文件浏览器    
+### 文件树
+
+> ```
+> Plug 'shougo/vimfiler.vim'                         " file explorer 这个项目已经不维护了
+> ```
+
+现在采用`shougo/defx.nvim`这个插件
+
+```
+if has('nvim')
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/defx.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+```
+
+### 语法树
+
+```
 Plug 'majutsushi/tagbar'                           "浏览tag    
-Plug 'mg979/vim-visual-multi'                      "多光标    
-
-Plug 'mhinz/vim-startify'                              "start page
-
-Plug 'neomake/neomake'                             "语法检查
+```
 
 ## **美化篇**
 
+### 安装开始界面插件
+
+```
+Plug 'mhinz/vim-startify'                              "start page
+```
+
 ### 安装主题
 
-`Plug 'chxuan/change-colorscheme'                   "主题切换插件    `
+`Plug 'icymind/NeoSolarized'                 "主题    `
 
 ### 安装状态栏插件
 
@@ -150,5 +183,46 @@ Plug 'vim-airline/vim-airline'                     "状态栏工具
 Plug 'vim-airline/vim-airline-themes'              "状态栏主题    
 ```
 
-###
+```typescript
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Airline config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_powerline_fonts = 0
+let g:airline_theme = 'bubblegum'
+let g:airline#extensions#whitespace#enabled = 0
+
+" to use fancy symbols for airline, uncomment the following lines and use a
+" patched font (more info on the README.rst)
+if !exists('g:airline_symbols')
+   let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#left_sep = '⮀'
+let g:airline#extensions#tabline#left_alt_sep = '⮁'
+let g:airline#extensions#tabline#right_sep = '⮂'
+let g:airline#extensions#tabline#right_alt_sep = '⮃'
+```
+
+
+
+
+
+
+
+
+
+-----
+
+这是我自己的neovim配置
+
+https://github.com/tabris233/config/blob/master/neovim/init.vim
 
