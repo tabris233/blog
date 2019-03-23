@@ -9,11 +9,11 @@ toc: true
 
 
 
-# vim
+# vim简介
 
 Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。
 
-所有的 Unix Like 系统都会内建 vi 文书编辑器，其他的文书编辑器则不一定会存在。
+所有的 Unix Like 系统都会内建 vi 文本编辑器，其他的文本编辑器则不一定会存在。
 
 但是目前我们使用比较多的是 vim 编辑器。
 
@@ -29,11 +29,19 @@ vim主要有以下几个优点.
 
 但我这里采用的是`neovim`
 
-[NeoVim](https://neovim.io/) 旨在成为Vim的升级版，有不少对它的介绍，我就不赘述了。NeoVim官网强调了它的四大特点：Powerful plugins（强大的插件）、Better out-of-the-box（更好的开箱即用）、First-class embedding（高度支持嵌入模式）、Drop-in replacement for Vim（直接替换Vim）。
+[NeoVim](https://neovim.io/) 旨在成为Vim的升级版，有不少对它的介绍，我就不赘述了。NeoVim官网强调了它的四大特点:
+
+- Powerful plugins（强大的插件）
+
+- Better out-of-the-box（更好的开箱即用）
+- First-class embedding（高度支持嵌入模式）
+- Drop-in replacement for Vim（直接替换Vim）。
 
 ## vim插件管理器
 
 > 参考 https://www.jianshu.com/p/0c83e6aed270
+>
+> **每安装一个插件最好都要去github官网看下,顺便看看文档, 会让你安装的插件用起来更顺手.**
 
 ### 安装
 
@@ -42,13 +50,15 @@ vim主要有以下几个优点.
 neovim下安装命令
 
 ```shell
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \ 
+https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 vim下安装命令
 
 ```shell
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ 
+https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ### 用法
@@ -106,13 +116,19 @@ call plug#end()
 
 # 安装插件
 
+> 插件这个东西,少即是多,运行速度会更快
+
 ## 工具篇
 
 ### 安装[vim中文手册](https://github.com/yianwillis/vimcdoc)
 
+[yianwillis/vimcdoc](https://github.com/yianwillis/vimcdoc)
+
 `Plug 'yianwillis/vimcdoc'`
 
 ### 编码优化插件
+
+#### 代码补全
 
 vim要有python支持,如果没有需要输入`pip install neovim`命令安装neovim的python支持模块.
 
@@ -291,14 +307,6 @@ let g:airline#extensions#tabline#left_alt_sep = '⮁'
 let g:airline#extensions#tabline#right_sep = '⮂'
 let g:airline#extensions#tabline#right_alt_sep = '⮃'
 ```
-
-
-
-
-
-
-
-
 
 -----
 

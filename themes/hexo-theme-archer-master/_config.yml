@@ -37,6 +37,9 @@ about:
   # about页头图
   image: /intro/dsgl.jpg
 
+other:
+  enable: true
+  image: /intro/dsgl.jpg
 # ========== 站点 ========== #
 # 网站的title，每篇文章后面也会加上此字段利于SEO
 SEO_title: tabris's Blog
