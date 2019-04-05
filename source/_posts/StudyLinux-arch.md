@@ -12,7 +12,11 @@ toc: true
 >
 > 桌面环境真的是个大坑啊   
 >
->  
+> 
+>
+> 现在觉得折腾确实挺有趣的, 但以后有几回还是配一个mbp吧, linux的桌面环境是真的烦人..aur和完善的桌面环境感觉还是后者比较重要.
+>
+> 
 >
 > 争取能做出来一个安装+部署配置的脚本
 
@@ -233,8 +237,8 @@ sudo pacman -S tmux
 ```
 
 在这里配置tmux
-https://github.com/search?utf8=%E2%9C%93&q=tmux&type=
-https://github.com/samoshkin/tmux-config  <--推荐这个配置
+<https://github.com/gpakosz/.tmux> 这个简单好看,且对true color支持很好,但对
+https://github.com/samoshkin/tmux-config  <--推荐这个配置,这个配置针对键位的优化很好,
 
 [为 vim + tmux 开启真彩色(true color)](http://lotabout.me/2018/true-color-for-tmux-and-vim/)
 
@@ -255,6 +259,8 @@ https://github.com/samoshkin/tmux-config  <--推荐这个配置
 一个定制化的vim配置,支持`vim,neovim` 
 
 [官网](https://spacevim.org/)
+
+> 初学的时候可以使用这个省事儿些,但是后面学习使用vim最好采用自己的配置,按需添加插件配置.
 
 
 

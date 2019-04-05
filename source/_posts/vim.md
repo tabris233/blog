@@ -1,5 +1,5 @@
 ---
-title: vim使用心得(过会儿再写)
+title: vim使用心得
 date: 2019-03-11 15:33:11
 categories:  
 tags: [editor] #文章标签，可空，多标签请用格式，注意:后面有个空格
@@ -32,10 +32,81 @@ vim主要有以下几个优点.
 [NeoVim](https://neovim.io/) 旨在成为Vim的升级版，有不少对它的介绍，我就不赘述了。NeoVim官网强调了它的四大特点:
 
 - Powerful plugins（强大的插件）
-
 - Better out-of-the-box（更好的开箱即用）
 - First-class embedding（高度支持嵌入模式）
 - Drop-in replacement for Vim（直接替换Vim）。
+
+## vim基本配置
+
+> 了解的i还不是很详细, 暂时以我自己的配置介绍
+
+```vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" base config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set number
+
+set termguicolors                                  " true color
+colorscheme NeoSolarized                           " scheme
+set background=dark
+
+set encoding=utf-8
+
+" 自动折行
+set linebreak
+set nowrap
+"垂直滚动时，光标距离顶部/底部的位置（单位：行）。
+set scrolloff=5
+
+"set textwidth=80
+" tabs and spaces handling
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+" 侦测文件类型
+filetype on
+
+" 载入文件类型插件
+filetype plugin on
+
+" 为特定文件类型载入相关缩进文件
+filetype indent on
+
+" 设置空白字符的视觉提示
+set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽,space:·
+
+" 高亮当前行列
+set cursorcolumn
+set cursorline
+
+" 搜索时忽略大小写。
+set ignorecase
+" 如果同时打开了ignorecase，那么对于只有一个大写字母的搜索词，将大小写敏感；其他情况都是大小写不敏感。比如，搜索Test时，将不匹配test；搜索test时，将匹配Test。
+set smartcase
+
+" 打开英语单词的拼写检查。
+set spell spelllang=en_us
+
+" 自动切换工作目录。这主要用在一个 Vim 会话之中打开多个文件的情况，默认的工作目录是打开的第一个文件的目录。该配置可以将工作目录自动切换到，正在编辑的文件的目录。
+set autochdir
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" keyboard map
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" sudo保存
+ca w!! w !sudo tee "%" 
+
+tnoremap <ESC>    <C-\><C-n>
+
+"去行首空格
+":%s/^\s\+
+"去行末空格
+":%s/\s\+$
+
+```
+
+
 
 ## vim插件管理器
 
@@ -134,7 +205,7 @@ vim要有python支持,如果没有需要输入`pip install neovim`命令安装ne
 
 `Plug 'Valloric/YouCompleteMe'`
 
-上面的插件对C++的支持是很强大的但是在麻烦.后来改用`deoplete`了
+**上面的插件对C++的支持是很强大的但是在麻烦.后来改用`deoplete`了**
 
 ```
 Plug 'shougo/unite.vim'                            " deoplete依赖
@@ -176,7 +247,7 @@ Plug 'kristijanhusak/defx-icons'
 
 defx 没有提供默认的键盘映射,所以需要自己进行设置
 
-```vimscript
+```typescript
 " 这是我的配置. 参考文档种的配置做的修改.  还需完善
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
@@ -253,7 +324,7 @@ endfunction
 
 ### 语法树
 
-```
+```typescript
 Plug 'majutsushi/tagbar'                           "浏览tag    
 ```
 
