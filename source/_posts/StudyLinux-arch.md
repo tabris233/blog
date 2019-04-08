@@ -101,7 +101,11 @@ yay 的特性：
 
 安装 yay：
 
-你可以从 `git` 克隆并编译安装。
+> **现在yay已经添加到官方源中**
+>
+> **`sudo pacman -S yay`即可安装**
+
+当然你还可以从 `git` 克隆并编译安装。
 
 ```
 git clone https://aur.archlinux.org/yay.git
