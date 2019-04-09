@@ -153,7 +153,7 @@ electron-ssr : GUI的界面的ssr.很好用
 
 ####  中文字体
 
-[ 参考ArchWiki](https://wiki.archlinux.org/index.php/Font_Configuration/Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+[参考ArchWiki](https://wiki.archlinux.org/index.php/Font_Configuration/Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
 
 ```
 yay -S ttf-ms-fonts ttf-roboto noto-fonts noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-dejavu
@@ -491,7 +491,3 @@ systemctl enable lightdm.service
 #### 桌面美化
 
 好好干活,美化个屁.
-
-
-
-[^1]:
