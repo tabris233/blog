@@ -43,6 +43,7 @@ toc: true
 ### 基础设置:
 
 #### 创建新用户
+
 ```
 # useradd -m -G wheel <username> （请自行替换username为你的用户名）
 # passwd <username> （请自行替换username为你的用户名）
@@ -86,8 +87,19 @@ toc: true
 # systemctl enable sshd.service
 ```
 
+#### 添加archlinuxcn源
+
+archlinuxcn源至您的 /etc/pacman.conf
+
+```toml
+[archlinuxcn]
+#The Chinese Arch Linux communities packages.
+SigLevel = Optional TrustAll
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+```
 
 #### aur助手
+
 [yay](https://github.com/Jguer/yay) 是下一个最好的 AUR 助手。它使用 Go 语言写成，宗旨是提供最少化用户输入的 `pacman` 界面、yaourt 式的搜索，而几乎没有任何依赖软件。
 
 yay 的特性：
@@ -139,7 +151,15 @@ Powerline 是 vim、zsh、bash、tmux、IPython、Awesome、bar、fish、lemonba
 
 electron-ssr : GUI的界面的ssr.很好用
 
+####  中文字体
 
+[ 参考ArchWiki](https://wiki.archlinux.org/index.php/Font_Configuration/Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#Anti-aliasing%E6%95%88%E6%9E%9C%E7%9A%84%E5%AD%97%E4%BD%93%E5%8F%82%E8%80%83%E9%85%8D%E7%BD%AE)
+
+```
+yay -S ttf-ms-fonts ttf-roboto noto-fonts noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-dejavu
+```
+
+添加配置文件,`~/.config/fontconfig/fonts.conf` or `/etc/fonts/local.conf`
 
 ### 命令行
 
