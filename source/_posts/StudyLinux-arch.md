@@ -14,7 +14,7 @@ toc: true
 >
 > 
 >
-> 现在觉得折腾确实挺有趣的, 但以后有几回还是配一个mbp吧, linux的桌面环境是真的烦人..aur和完善的桌面环境感觉还是后者比较重要.
+> 现在觉得折腾确实挺有趣的, 但以后有机会还是配一个mbp吧, linux的桌面环境是真的烦人..aur和完善的桌面环境感觉还是后者比较重要.
 >
 > 
 >
@@ -153,7 +153,9 @@ electron-ssr : GUI的界面的ssr.很好用
 
 ####  中文字体
 
-[参考ArchWiki](https://wiki.archlinux.org/index.php/Font_Configuration/Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+[参考ArchWiki]
+
+<https://wiki.archlinux.org/index.php/Font_Configuration/Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>
 
 ```
 yay -S ttf-ms-fonts ttf-roboto noto-fonts noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-dejavu
@@ -267,6 +269,18 @@ https://github.com/samoshkin/tmux-config  <--推荐这个配置,这个配置针�
 [为 vim + tmux 开启真彩色(true color)](http://lotabout.me/2018/true-color-for-tmux-and-vim/)
 
 [tmux进阶之tmuxinator](https://blog.csdn.net/u014717036/article/details/60139776)
+
+>   FAQ:
+>
+>   1.  tmux 嵌套使用的话，如何将 tmux 命令发送到嵌套内的会话窗口？[转载自](<https://blog.csdn.net/henryhu712/article/details/83824487>)
+>
+>         很常见的例子是，在本地用 tmux 登陆远程服务器，服务器上又使用了 tmux。问题是，在这种情况下，tmux 指令被外层会话窗口捕获（本地 tmux），根本无法控制服务器上运行的 tmux。例如，想退出服务器上的会话，ctrl + b, d, 结果退出的是本地 tmux 连接, sh*t。
+>
+>         介绍一个简单方法：按着 ctrl，点击两次 b 键，这样发出的 tmux 指令就是发送到内层窗口会话！如此简单！
+>
+>   ---
+
+
 
 #### neovim
 

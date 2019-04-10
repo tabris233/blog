@@ -354,7 +354,7 @@ height:50vh;
 <p>manjaro 真好用 arch 再见!</p>
 <p>推荐manjaro-deepin 对中文的支持比较好</p>
 <p>桌面环境真的是个大坑啊   </p>
-<p>现在觉得折腾确实挺有趣的, 但以后有几回还是配一个mbp吧, linux的桌面环境是真的烦人..aur和完善的桌面环境感觉还是后者比较重要.</p>
+<p>现在觉得折腾确实挺有趣的, 但以后有机会还是配一个mbp吧, linux的桌面环境是真的烦人..aur和完善的桌面环境感觉还是后者比较重要.</p>
 <p>争取能做出来一个安装+部署配置的脚本</p>
 </blockquote>
 <h1 id="Arch-踩坑笔记"><a href="#Arch-踩坑笔记" class="headerlink" title="Arch 踩坑笔记"></a>Arch 踩坑笔记</h1><blockquote>
@@ -406,7 +406,8 @@ height:50vh;
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S &lt;package-name&gt;</span><br></pre></td></tr></table></figure>
 <h4 id="powerline"><a href="#powerline" class="headerlink" title="powerline"></a>powerline</h4><p>Powerline 是 vim、zsh、bash、tmux、IPython、Awesome、bar、fish、lemonbar、pdb、rc、shell、tcsh、wm、i3 和 Qtil 中的一个状态栏插件。它给程序提供了状态栏，并使程序更好看。它用 Python 写成。</p>
 <h4 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h4><p>electron-ssr : GUI的界面的ssr.很好用</p>
-<h4 id="中文字体"><a href="#中文字体" class="headerlink" title="中文字体"></a>中文字体</h4><p><a href="https://wiki.archlinux.org/index.php/Font_Configuration/Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87" target="_blank" rel="noopener">参考ArchWiki</a>)</p>
+<h4 id="中文字体"><a href="#中文字体" class="headerlink" title="中文字体"></a>中文字体</h4><p>[参考ArchWiki]</p>
+<p><a href="https://wiki.archlinux.org/index.php/Font_Configuration/Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" target="_blank" rel="noopener">https://wiki.archlinux.org/index.php/Font_Configuration/Chinese_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S ttf-ms-fonts ttf-roboto noto-fonts noto-fonts-cjk adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ttf-dejavu</span><br></pre></td></tr></table></figure>
 <p>添加配置文件,<code>~/.config/fontconfig/fonts.conf</code> or <code>/etc/fonts/local.conf</code></p>
 <h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><blockquote>
@@ -478,6 +479,16 @@ height:50vh;
 <p>在这里配置tmux<br><a href="https://github.com/gpakosz/.tmux" target="_blank" rel="noopener">https://github.com/gpakosz/.tmux</a> 这个简单好看,且对true color支持很好,但对<br><a href="https://github.com/samoshkin/tmux-config" target="_blank" rel="noopener">https://github.com/samoshkin/tmux-config</a>  &lt;–推荐这个配置,这个配置针对键位的优化很好,</p>
 <p><a href="http://lotabout.me/2018/true-color-for-tmux-and-vim/" target="_blank" rel="noopener">为 vim + tmux 开启真彩色(true color)</a></p>
 <p><a href="https://blog.csdn.net/u014717036/article/details/60139776" target="_blank" rel="noopener">tmux进阶之tmuxinator</a></p>
+<blockquote>
+<p>  FAQ:</p>
+<ol>
+<li><p>tmux 嵌套使用的话，如何将 tmux 命令发送到嵌套内的会话窗口？<a href="https://blog.csdn.net/henryhu712/article/details/83824487" target="_blank" rel="noopener">转载自</a></p>
+<p>  很常见的例子是，在本地用 tmux 登陆远程服务器，服务器上又使用了 tmux。问题是，在这种情况下，tmux 指令被外层会话窗口捕获（本地 tmux），根本无法控制服务器上运行的 tmux。例如，想退出服务器上的会话，ctrl + b, d, 结果退出的是本地 tmux 连接, sh*t。</p>
+<p>  介绍一个简单方法：按着 ctrl，点击两次 b 键，这样发出的 tmux 指令就是发送到内层窗口会话！如此简单！</p>
+</li>
+</ol>
+<hr>
+</blockquote>
 <h4 id="neovim"><a href="#neovim" class="headerlink" title="neovim"></a>neovim</h4><blockquote>
 <p>neovim属于vim的加强版  功能更加强大</p>
 </blockquote>
@@ -856,10 +867,6 @@ top:50vh;
     
     
     
-    
-    
-    
-    
     <div class="total-archive"> Total : 13 </div>
     
     <div class="post-archive">
@@ -974,21 +981,21 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="实习"><span class="iconfont-archer">&#xe606;</span>实习</span>
     
+        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
+    
         <span class="sidebar-tag-name" data-tags="正则表达式"><span class="iconfont-archer">&#xe606;</span>正则表达式</span>
     
         <span class="sidebar-tag-name" data-tags="设计模式"><span class="iconfont-archer">&#xe606;</span>设计模式</span>
     
-        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
+        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
         <span class="sidebar-tag-name" data-tags="docker"><span class="iconfont-archer">&#xe606;</span>docker</span>
     
         <span class="sidebar-tag-name" data-tags="虚拟化"><span class="iconfont-archer">&#xe606;</span>虚拟化</span>
     
-        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
+        <span class="sidebar-tag-name" data-tags="editor"><span class="iconfont-archer">&#xe606;</span>editor</span>
     
         <span class="sidebar-tag-name" data-tags="随笔"><span class="iconfont-archer">&#xe606;</span>随笔</span>
-    
-        <span class="sidebar-tag-name" data-tags="editor"><span class="iconfont-archer">&#xe606;</span>editor</span>
     
         <span class="sidebar-tag-name" data-tags="大数据"><span class="iconfont-archer">&#xe606;</span>大数据</span>
     
