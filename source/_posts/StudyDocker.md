@@ -35,13 +35,14 @@ sudo pacman -S docker
 非root用户运行docker是执行如下命令
 
 ```shell
-sudo usermod -aG docker  $USER #your usrname
+sudo usermod -aG docker $USER #your usrname
 ```
 
 执行如下命令启动docker服务
 
 ```shell
-sudo service docker start
+#systemctl enable docker  
+systenctl start docker
 ```
 
 ## 镜像加速
@@ -57,3 +58,4 @@ sudo service docker start
     "registry-mirrors": ["https://oj7znbfj.mirror.aliyuncs.com"]
 }
 ```
+

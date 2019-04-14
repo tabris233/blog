@@ -87,6 +87,12 @@ toc: true
 # systemctl enable sshd.service
 ```
 
+#### 启用中国源
+
+```shell
+sudo pacman-mirrors -c China
+```
+
 #### 添加archlinuxcn源
 
 archlinuxcn源至您的 /etc/pacman.conf
