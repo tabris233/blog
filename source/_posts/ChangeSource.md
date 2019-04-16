@@ -1,5 +1,5 @@
 ---
-title: 主流应用换源流程
+title: 主流应用换源or镜像加速
 date: 2019-4-14 10:59:03
 tags: [linux,git,ruby,docker,npm]
 description: ["应用换源"]

@@ -41,8 +41,8 @@ sudo usermod -aG docker $USER #your usrname
 执行如下命令启动docker服务
 
 ```shell
-#systemctl enable docker  
-systenctl start docker
+systemctl enable docker  
+systemctl start docker
 ```
 
 ## 镜像加速
