@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://tabris.top
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -38,8 +38,8 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
+  enable: false
+  line_number: false
   auto_detect: false
   tab_replace:
 
@@ -63,7 +63,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: aloha#hexo-theme-archer-master
+theme: Claudia
+#aloha
+#hexo-theme-archer-master
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -91,3 +93,22 @@ jsonContent:
     excerpt: false
     categories: false
     tags: true
+
+
+algolia:
+   applicationID: '83PXRYSKUV'
+   apiKey: 'c1e1df032e1f932464d564aaef98cdf0'
+   indexName: 'TABRIS'
+
+sidebar:
+   bio: Programer / LOLer / Arsenaler
+   avatar: /images/avatar.jpg
+   subtitle: 程序员
+   location: Shenzhen
+   social:
+     github: https://github.com/tabris233
+     weibo: http://weibo.com/u/1810108861
+     twitter:
+
+
+

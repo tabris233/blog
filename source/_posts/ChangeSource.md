@@ -92,7 +92,8 @@ sudo apt-get -f install
 
 ### 西电源（只有校内网网线使用，但是不限制流量，还是十分靠谱的）
 
-```deb http://linux.xidian.edu.cn/mirrors/ubuntu/ xenial main restricted universe multiverse
+```
+deb http://linux.xidian.edu.cn/mirrors/ubuntu/ xenial main restricted universe multiverse
 #deb-src http://linux.xidian.edu.cn/mirrors/ubuntu/ xenial main restricted universe multiverse
 deb http://linux.xidian.edu.cn/mirrors/ubuntu/ xenial-security main restricted universe multiverse
 #deb-src http://linux.xidian.edu.cn/mirrors/ubuntu/ xenial-security main restricted universe multiverse
