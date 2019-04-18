@@ -5,6 +5,10 @@ categories:
 tags: [loser]
 description: 
 toc: true
+type: "about"
+layout: "about"
 ---
 
 > a loser
+
+# test about page

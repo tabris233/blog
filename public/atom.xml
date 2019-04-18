@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>tabris的博客</title>
+  
+  <subtitle>IT互联网</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://tabris.top/"/>
+  <updated>2019-04-17T12:17:37.301Z</updated>
+  <id>http://tabris.top/</id>
+  
+  <author>
+    <name>tabris</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>主流应用换源or镜像加速</title>
+    <link href="http://tabris.top/2019/04/14/changesource/"/>
+    <id>http://tabris.top/2019/04/14/changesource/</id>
+    <published>2019-04-14T02:59:03.000Z</published>
+    <updated>2019-04-17T12:17:37.301Z</updated>
+    
+    <summary type="html">
+    
+      应用换源
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://tabris.top/tags/linux/"/>
+    
+      <category term="git" scheme="http://tabris.top/tags/git/"/>
+    
+      <category term="ruby" scheme="http://tabris.top/tags/ruby/"/>
+    
+      <category term="docker" scheme="http://tabris.top/tags/docker/"/>
+    
+      <category term="npm" scheme="http://tabris.top/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vim使用心得</title>
+    <link href="http://tabris.top/2019/03/11/vim/"/>
+    <id>http://tabris.top/2019/03/11/vim/</id>
+    <published>2019-03-11T07:33:11.000Z</published>
+    <updated>2019-04-17T11:16:35.389Z</updated>
+    
+    <summary type="html">
+    
+      tabris的vim使用心得
+    
+    </summary>
+    
+    
+      <category term="editor" scheme="http://tabris.top/tags/editor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>StudyDocker</title>
+    <link href="http://tabris.top/2019/01/10/studydocker/"/>
+    <id>http://tabris.top/2019/01/10/studydocker/</id>
+    <published>2019-01-10T09:21:03.000Z</published>
+    <updated>2019-04-17T11:16:35.386Z</updated>
+    
+    <summary type="html">
+    
+      Docker 轻量级虚拟化
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://tabris.top/tags/linux/"/>
+    
+      <category term="docker" scheme="http://tabris.top/tags/docker/"/>
+    
+      <category term="虚拟化" scheme="http://tabris.top/tags/%E8%99%9A%E6%8B%9F%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式</title>
+    <link href="http://tabris.top/2018/11/18/designpattern/"/>
+    <id>http://tabris.top/2018/11/18/designpattern/</id>
+    <published>2018-11-18T13:06:08.000Z</published>
+    <updated>2019-04-17T11:16:35.386Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;学习下设计模式&lt;/p&gt;
+&lt;p&gt;参考&lt;a href=&quot;http://www.runoob.com/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="开发" scheme="http://tabris.top/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工厂模式.</title>
+    <link href="http://tabris.top/2018/11/18/productpattern/"/>
+    <id>http://tabris.top/2018/11/18/productpattern/</id>
+    <published>2018-11-18T04:44:08.000Z</published>
+    <updated>2019-04-17T11:16:35.386Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;http://www.runoob.com/design-pattern/abstract-factory-pattern.html&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="http://tabris.top/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="设计模式" scheme="http://tabris.top/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>StudyLinux----arch</title>
+    <link href="http://tabris.top/2018/09/23/studylinux-arch/"/>
+    <id>http://tabris.top/2018/09/23/studylinux-arch/</id>
+    <published>2018-09-23T09:21:03.000Z</published>
+    <updated>2019-04-17T11:16:35.389Z</updated>
+    
+    <summary type="html">
+    
+      Arch 作为&#39;最难&#39;安装的linux系统  通过它可以更好的了解linux
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://tabris.top/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GraduationProject</title>
+    <link href="http://tabris.top/2018/09/23/graduationproject/"/>
+    <id>http://tabris.top/2018/09/23/graduationproject/</id>
+    <published>2018-09-23T07:33:11.000Z</published>
+    <updated>2019-04-17T11:16:35.386Z</updated>
+    
+    <summary type="html">
+    
+      tabris的毕业设计
+    
+    </summary>
+    
+    
+      <category term="毕业设计" scheme="http://tabris.top/tags/%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则表达式手册</title>
+    <link href="http://tabris.top/2018/03/17/manualofregex/"/>
+    <id>http://tabris.top/2018/03/17/manualofregex/</id>
+    <published>2018-03-17T08:15:41.000Z</published>
+    <updated>2019-04-17T11:16:35.386Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;表达式全集&quot;&gt;&lt;a href=&quot;#表达式全集&quot; class=&quot;headerlink&quot; title=&quot;表达式全集&quot;&gt;&lt;/a&gt;表达式全集&lt;/h1&gt;&lt;p&gt;由于hexo的markdown的引擎太烂了  这里的格式会乱点&lt;br&gt;有时间在换一个好一点的引擎  
+        
+      
+    
+    </summary>
+    
+    
+      <category term="正则表达式" scheme="http://tabris.top/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python学习笔记</title>
+    <link href="http://tabris.top/2018/03/07/notesofpython/"/>
+    <id>http://tabris.top/2018/03/07/notesofpython/</id>
+    <published>2018-03-07T12:12:11.000Z</published>
+    <updated>2019-04-17T11:16:35.386Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;抄写了两个Spider,发现对于Python基础的掌握实在是差劲的可以.&lt;/p&gt;
+&lt;p&gt;于是乎 过来补补基础&lt;/p&gt;
+&lt;p&gt;一直在&lt;a href=&quot;https://www.hackerrank.com/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面试经历.</title>
+    <link href="http://tabris.top/2018/01/31/experienceofinterview/"/>
+    <id>http://tabris.top/2018/01/31/experienceofinterview/</id>
+    <published>2018-01-31T07:56:08.000Z</published>
+    <updated>2019-04-17T11:16:35.386Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;总结下所有的面试, 这样才能&lt;strong&gt;慢慢&lt;/strong&gt;进步呀,,,,&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;哈尔滨某小公司-C-岗实习-现场面-offer&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="http://tabris.top/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="C++" scheme="http://tabris.top/tags/C/"/>
+    
+      <category term="数据库" scheme="http://tabris.top/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+      <category term="操作系统" scheme="http://tabris.top/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="计算机网络" scheme="http://tabris.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试学习.</title>
+    <link href="http://tabris.top/2018/01/29/studyofinterview/"/>
+    <id>http://tabris.top/2018/01/29/studyofinterview/</id>
+    <published>2018-01-29T04:44:08.000Z</published>
+    <updated>2019-04-17T11:16:35.389Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;记录下我针对面试的学习&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;算法-编程题&quot;&gt;&lt;a href=&quot;#算法-编程题&quot; class=&quot;headerlink&quot; title=&quot;算法/编程题&quot;&gt;&lt;/a&gt;算法/编程题&lt;/h2&gt;&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="http://tabris.top/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="C++" scheme="http://tabris.top/tags/C/"/>
+    
+      <category term="操作系统" scheme="http://tabris.top/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+      <category term="计算机网络" scheme="http://tabris.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="大数据" scheme="http://tabris.top/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://tabris.top/2018/01/25/hello-world/"/>
+    <id>http://tabris.top/2018/01/25/hello-world/</id>
+    <published>2018-01-25T13:00:08.000Z</published>
+    <updated>2019-04-17T11:16:35.389Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World&quot;&gt;&lt;/a&gt;Hello
+        
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://tabris.top/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>InternshipSummary</title>
+    <link href="http://tabris.top/2017/12/31/internshipsummary/"/>
+    <id>http://tabris.top/2017/12/31/internshipsummary/</id>
+    <published>2017-12-30T16:00:00.000Z</published>
+    <updated>2019-04-17T11:16:35.386Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Internship-Summary&quot;&gt;&lt;a href=&quot;#Internship-Summary&quot; class=&quot;headerlink&quot; title=&quot;Internship Summary&quot;&gt;&lt;/a&gt;Internship
+        
+      
+    
+    </summary>
+    
+    
+      <category term="实习" scheme="http://tabris.top/tags/%E5%AE%9E%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;原&gt;#  Codeforces 794F - Leha and security system [线段树-区间更新]【数据结构】</title>
+    <link href="http://tabris.top/2017/09/21/78053974/"/>
+    <id>http://tabris.top/2017/09/21/78053974/</id>
+    <published>2017-09-21T08:44:50.000Z</published>
+    <updated>2019-04-17T13:04:30.374Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Codeforces-794F-Leha-and-security-system-线段树-区间更新-【数据结构】&quot;&gt;&lt;a href=&quot;#Codeforces-794F-Leha-and-security-system-线段树-区间更新-【数据结构】&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>必须要会的Git基本使用及常用命令操作</title>
+    <link href="http://tabris.top/2017/04/25/studyofgit/"/>
+    <id>http://tabris.top/2017/04/25/studyofgit/</id>
+    <published>2017-04-25T05:15:08.000Z</published>
+    <updated>2019-04-17T11:16:35.389Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前一直用的svn，后来换了之后才发现git的强大功能，是svn不能比的。缺点就是可能上手比较难一点，刚开始自己研究了两天才摸索出来一些基本使用方法。&lt;br&gt;最近做项目需要建库等等，都用到了git，随着越来越多的使用，也越来有越多的认识。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://tabris.top/tags/git/"/>
+    
+  </entry>
+  
+</feed>
