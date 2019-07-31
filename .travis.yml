@@ -15,6 +15,11 @@ cache: yarn # 缓存yarn命令也就是yarn add命令执行后的目录文件，
 install: 
   - yarn global add hexo-cli # 在安装阶段，运行yarn命令来安装依赖
   - yarn
+  - yarn add hexo-prism-plugin -D
+  - yarn add hexo-generator-search -D
+  - yarn add hexo-permalink-pinyin -D
+  - yarn add hexo-wordcount -D
+  - yarn add hexo-generator-feed -D
 
 script:
   - hexo clean
