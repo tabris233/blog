@@ -15,9 +15,9 @@ cache: npm # 缓存yarn命令也就是yarn add命令执行后的目录文件，�
 install: 
   - npm install hexo-cli -g # 在安装阶段，运行yarn命令来安装依赖
   - npm install
-  - hexo g
 
-script: yarn build # 在执行阶段，运行yarn add命令来打包文件
+script:
+  - hexo g
 
 deploy: # 发布阶段
   provider: pages # 解析支持者为github pages
