@@ -10,14 +10,15 @@ git: # 克隆github上的项目到travis
   depth: 1 # 只克隆最新的一次commit提交，最多可以克隆最新的30次提交，但是没必要
   submodules: false # 不克隆子项目
 
-cache: npm # 缓存yarn命令也就是yarn add命令执行后的目录文件，即node_modules
+cache: yarn # 缓存yarn命令也就是yarn add命令执行后的目录文件，即node_modules
 
 install: 
-  - npm install hexo-cli -g # 在安装阶段，运行yarn命令来安装依赖
-  - npm install
+  - yarn install hexo-cli -g # 在安装阶段，运行yarn命令来安装依赖
+  - yarn
 
 script:
-  - hexo g
+  - hexo clean
+  - hexo generate
 
 deploy: # 发布阶段
   provider: pages # 解析支持者为github pages
