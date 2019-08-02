@@ -8,7 +8,7 @@ branches: # 该shell脚本只对github的matery分支生效
 git: # 克隆github上的项目到travis
   quite: true # 为了不打印一些日志，故设为安静克隆
   depth: 1 # 只克隆最新的一次commit提交，最多可以克隆最新的30次提交，但是没必要
-  submodules: false # 不克隆子项目
+  submodules: true # 不克隆子项目
 
 cache: yarn # 缓存yarn命令也就是yarn add命令执行后的目录文件，即node_modules
 
@@ -32,9 +32,11 @@ deploy: # 发布阶段
   keep_history: true # 禁止travis对你的github项目进行强制推送 
   repo: tabris233/tabris233.github.io
   target-branch: gh-pages
+  fqdn: tabris.top
   local_dir: ./public
   email: tabris.dq@qq.com
   name: tabris
+  project_name: tabris_blog_travis-ci
   on: # 这个静态文件来自travis中的master分支
     branch: matery
     all_branches: true
