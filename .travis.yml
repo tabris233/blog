@@ -37,5 +37,5 @@ deploy: # 发布阶段
   name: tabris
   on: # 这个静态文件来自travis中的master分支
     branch: master
-    tags: true
+    # tags: true
     all_branches: true
