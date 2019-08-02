@@ -31,6 +31,7 @@ deploy: # 发布阶段
   github_token: $GITHUB_TOKEN  # 在travis的环境变量获取授权码，表示travis有权对github的项目进行拉取推送操作
   keep_history: true # 禁止travis对你的github项目进行强制推送 
   repo: tabris233/tabris233.github.io
+  target-branch: gh-pages
   local_dir: ./public
   email: tabris.dq@qq.com
   name: tabris
