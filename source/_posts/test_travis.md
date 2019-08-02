@@ -12,7 +12,7 @@ top: false
 password:
 # 本文章是否开启mathjax，且需要在主题的_config.yml文件中也需要开启才行
 mathjax: false
-summary: "某天我之前的`hexo`主题被自己玩坏了, 决定换一个主题,\n同时突然想把之前`CSDN`博文迁移进来,CSDN这个网站是越来越傻逼了.最终选择了hexo-theme-matery主题,\n但最艰难的博文迁移过程算是完成了,但仍然有很大瑕疵.."
+summary: "hexo blog CI deploy by travis-ci"
 categories:
 tags:
 ---
